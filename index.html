@@ -11,33 +11,87 @@
 
 <body>
   <!-- header start -->
-  <header>
-    <div class="header-top mb-4" style="background-color: #F5F5F5;height: 50px;">
-    <div class="container">
-      <div class="d-flex" style="float: right; margin-right: 8px;">
+  <header class=" ">
+    <div class="header-top">
+      <div class="container header-top-btn-box">
+        <div class="d-flex header-top-btn" style="float: right; margin-right: 8px;">
           <form class="form-inline">
-              <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                <option selected>Currency</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </form>
-            <form class="form-inline">
-                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                  <option selected>Country</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </form>
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+              <option selected>Currency</option>
+              <option value="HKD">HKD</option>
+              <option value="RMB">RMB</option>
+              <option value="USD">USD</option>
+            </select>
+          </form>
+          <form class="form-inline">
+            <select class="custom-select" id="inlineFormCustomSelectPref">
+              <option selected>Country</option>
+              <option value="HK">Hong Kong</option>
+              <option value="TW">Taiwan</option>
+              <option value="USA">USA</option>
+            </select>
+          </form>
+        </div>
       </div>
     </div>
-    </div>
+      <div class="header-primary" id="HeaderFixed">
+        <div class="container d-flex header-primary-content">
+          <a href="./" class="ap-logo">
+            <img src="./assets/img/logo.png" alt="logo">
+          </a>
+          <ul class="menu-left">
+            <li><a href="#"></a>COLLECTIONS</li>
+            <li><a href="#"></a>POLICY</li>
+            <li><a href="#"></a>CONTACT US</li>
+            <li><a href="#"></a>SEARCH</li>
+          </ul>
+          <ul class="menu-right">
+            <li><a href="#">
+                <img src="./assets/icon/icon-Search.svg" alt="icon-search">
+              </a>
+            </li>
+            <li><a href="#">
+                <img src="./assets/icon/Icon-Login.svg" alt="icon-login">
+              </a>
+            </li>
+            <li><a href="#">
+                <img src="./assets/icon/Icon-Cart.svg" alt="Icon-Cart">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
   </header>
   <!-- header end -->
+  <!-- banner start -->
+  <div id="headerBannerControls" class="carousel slide content" data-ride="carousel" style="z-index: -1;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/img/img-homePage-banner.png" class="d-block hemePage-img" alt="1">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/img-homePage-banner2.png" class="d-block hemePage-img" alt="2">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/img-homePage-banner3.png" class="d-block hemePage-img" alt="3">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#headerBannerControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#headerBannerControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <!-- <div >
+    <img class="hemePage-img" src="./assets/img/img-homePage-banner.png" alt="">
+  </div> -->
+  <!-- banner end -->
   <!-- content start -->
   <div class="container">
+    <div class="text-center">News</div>
     <div class="alert alert-success" role="alert">
       <h4 class="alert-heading">Well done!</h4>
       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so
@@ -45,22 +99,17 @@
       <hr>
       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
     </div>
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Dropdown button
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </div>
   </div>
   <!-- content end -->
+  <!-- footer start -->
+  <div class="text-center footer-box">
+    <p> ©2019 Aussie Premier. All rights reserved. </p>
+  </div>
+  <!-- footer end -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./dist/js/popper.min.js"></script>
   <script src="./dist/js/bootstrap.min.js"></script>
+  <script src="./dist/js/all.js"></script>
 </body>
 
 </html>

@@ -8475,6 +8475,125 @@ a.text-dark:focus, a.text-dark:hover {
     border: 1px solid #ddd !important;
   }
 }
+.header-top-btn-box {
+  position: relative;
+}
+
+.header-top {
+  background-color: #F5F5F5;
+  height: 50px;
+}
+
+.header-top-btn {
+  position: absolute;
+  right: 0;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+}
+
+.sticky + .content {
+  padding-top: 102px !important;
+}
+
+.header {
+  padding: 0px;
+}
+
+.content {
+  padding: 0px;
+}
+
+.header-primary {
+  width: 100%;
+  background-color: aquamarine;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header-primary-content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.ap-logo {
+  height: 100%;
+}
+
+.menu-left {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin-top: 16px;
+}
+
+.menu-left li {
+  padding: 10px 16px 10px 16px;
+  cursor: pointer;
+}
+
+.menu-left li:hover {
+  background-color: #777777;
+  border-radius: 2px;
+}
+
+.menu-left a {
+  bottom: -10px;
+}
+
+.menu-right {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  position: absolute;
+  right: 0px;
+}
+
+.menu-right li {
+  padding: 10px 8px 10px 8px;
+  cursor: pointer;
+}
+
+.menu-right img {
+  bottom: -10px;
+  width: 40px;
+  height: 40px;
+}
+
+.hemePage-img {
+  height: 630px;
+  width: 100%;
+  background-color: #797979;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer-box {
+  height: 70px;
+  background-color: #E8E8E8;
+  margin: 0 auto;
+  position: relative;
+}
+
+.footer-box p {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .test {
   height: 400px;
 }
