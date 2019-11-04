@@ -34,33 +34,33 @@
         </div>
       </div>
     </div>
-      <div class="header-primary" id="HeaderFixed">
-        <div class="container d-flex header-primary-content">
-          <a href="./" class="ap-logo">
-            <img src="./assets/img/logo.png" alt="logo">
-          </a>
-          <ul class="menu-left">
-            <li><a href="#"></a>COLLECTIONS</li>
-            <li><a href="#"></a>POLICY</li>
-            <li><a href="#"></a>CONTACT US</li>
-            <li><a href="#"></a>SEARCH</li>
-          </ul>
-          <ul class="menu-right">
-            <li><a href="#">
-                <img src="./assets/icon/icon-Search.svg" alt="icon-search">
-              </a>
-            </li>
-            <li><a href="#">
-                <img src="./assets/icon/Icon-Login.svg" alt="icon-login">
-              </a>
-            </li>
-            <li><a href="#">
-                <img src="./assets/icon/Icon-Cart.svg" alt="Icon-Cart">
-              </a>
-            </li>
-          </ul>
-        </div>
+    <div class="header-primary" id="HeaderFixed">
+      <div class="container d-flex header-primary-content">
+        <a href="./" class="ap-logo">
+          <img src="./assets/img/logo.png" alt="logo">
+        </a>
+        <ul class="menu-left">
+          <li><a href="#"></a>COLLECTIONS</li>
+          <li><a href="#"></a>POLICY</li>
+          <li><a href="#"></a>CONTACT US</li>
+          <li><a href="#"></a>SEARCH</li>
+        </ul>
+        <ul class="menu-right">
+          <li><a href="#">
+              <img src="./assets/icon/icon-Search.svg" alt="icon-search">
+            </a>
+          </li>
+          <li><a href="#">
+              <img src="./assets/icon/Icon-Login.svg" alt="icon-login">
+            </a>
+          </li>
+          <li><a href="#">
+              <img src="./assets/icon/Icon-Cart.svg" alt="Icon-Cart">
+            </a>
+          </li>
+        </ul>
       </div>
+    </div>
   </header>
   <!-- header end -->
   <!-- banner start -->
@@ -91,13 +91,35 @@
   <!-- banner end -->
   <!-- content start -->
   <div class="container">
-    <div class="text-center">News</div>
-    <div class="alert alert-success" role="alert">
-      <h4 class="alert-heading">Well done!</h4>
-      <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so
-        that you can see how spacing within an alert works with this kind of content.</p>
-      <hr>
-      <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+      <!-- do search start-->
+      <div id="searchbar" class="collapsed">
+      <div id="search-box" style="z-index: 999;">
+        <div id="sliding-panel-outer">
+          <div id="sliding-panel-inner">
+            <input type="text" id="search-input" />
+            <button id="search-submit">Search</button>
+          </div>
+          <!--#sliding-panel-inner-->
+        </div>
+        <!--#sliding-panel-outer-->
+        <div class="search-label">
+          <i class="fa fa-search"><img src="./assets/icon/icon-Search.svg" alt="icon-search"></i>
+          <i class="fa fa-times">X</i>
+        </div>
+      </div>
+      <!--#search-box-->
+    </div>
+    <!--#searchbar-->
+    <!-- do search end -->
+    <div style="z-index: -1;">
+        <div class="mt-4 text-center">News</div>
+        <div class="alert alert-success" role="alert" style="z-index: -1;">
+          <h4 class="alert-heading">Well done!</h4>
+          <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so
+            that you can see how spacing within an alert works with this kind of content.</p>
+          <hr>
+          <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+        </div>
     </div>
   </div>
   <!-- content end -->

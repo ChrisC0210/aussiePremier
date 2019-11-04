@@ -11,3 +11,13 @@ function HeaderFixed() {
     header.classList.remove("sticky");
   }
 }
+//jq start
+$(document).ready(function () {
+//search bar
+$("#searchbar .search-label").on("click", function(e){
+  e.preventDefault();
+  $("#searchbar").toggleClass("collapsed");
+});//click
+//
+});
+//jq end

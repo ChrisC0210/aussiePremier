@@ -8571,6 +8571,50 @@ a.text-dark:focus, a.text-dark:hover {
   height: 40px;
 }
 
+#searchbar {
+  position: relative;
+}
+
+#searchbar #sliding-panel-outer {
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  width: 600px;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  border: solid 1px red;
+}
+
+#searchbar #sliding-panel-inner {
+  width: 500px;
+}
+
+#searchbar .search-label {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 30px;
+}
+
+#searchbar .search-label .fa-times,
+#searchbar.collapsed .search-label .fa-search {
+  display: inline-block;
+}
+
+#searchbar .search-label .fa-search,
+#searchbar.collapsed .search-label .fa-times {
+  display: none;
+}
+
+#searchbar.collapsed #sliding-panel-outer {
+  width: 0px;
+}
+
 .hemePage-img {
   height: 630px;
   width: 100%;
