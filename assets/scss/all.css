@@ -8601,13 +8601,11 @@ a.text-dark:focus, a.text-dark:hover {
   line-height: 30px;
 }
 
-#searchbar .search-label .fa-times,
-#searchbar.collapsed .search-label .fa-search {
+#searchbar .search-label .fa-times, #searchbar.collapsed .search-label .fa-search {
   display: inline-block;
 }
 
-#searchbar .search-label .fa-search,
-#searchbar.collapsed .search-label .fa-times {
+#searchbar .search-label .fa-search, #searchbar.collapsed .search-label .fa-times {
   display: none;
 }
 
