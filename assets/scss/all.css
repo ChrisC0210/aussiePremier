@@ -9064,6 +9064,8 @@ a.text-dark:focus, a.text-dark:hover {
 
 .news-img img {
   width: 100%;
+  filter: drop-shadow(2px 4px 4px rgba(110, 110, 110, 0.7));
+  -webkit-filter: drop-shadow(2px 4px 4px rgba(110, 110, 110, 0.7));
 }
 
 .news-content {
