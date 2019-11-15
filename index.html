@@ -11,7 +11,7 @@
 
 <body>
   <!-- header start -->
-  <header class=" ">
+  <header>
     <div class="header-top">
       <div class="container header-top-btn-box">
         <div class="d-flex header-top-btn text-r-1-4-1" style="float: right; margin-right: 8px;">
@@ -70,7 +70,7 @@
           </li>
         </ul>
         <!-- burger menu start -->
-        <div class="burger-menu">
+        <div class="burger-menu" onclick="burgerClick()">
           <div class="burger-menu-box">
             <span class="burger-menu-bar"></span>
             <span class="burger-menu-bar"></span>
@@ -156,6 +156,18 @@
   <script src="./dist/js/popper.min.js"></script>
   <script src="./dist/js/bootstrap.min.js"></script>
   <script src="./dist/js/all.js"></script>
+  <script>
+    var screenTable = window.matchMedia('(max-width:800px)');
+    function burgerClick(screenTable) {
+      if (screenTable.matches) {
+        document.body.style.backgroundColor = 'red';
+      } else {
+        document.body.style.backgroundColor = 'yellow';        
+      }
+    }
+    burgerClick(screenTable);
+    screenTable.addListener(burgerClick);
+    </script>
 </body>
 
 </html>
