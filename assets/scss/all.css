@@ -8924,13 +8924,14 @@ a.text-dark:focus, a.text-dark:hover {
 
 .header-primary-content {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
 .ap-logo {
+  width: 120px;
   height: 100%;
 }
 
@@ -9072,8 +9073,9 @@ a.text-dark:focus, a.text-dark:hover {
 .burger-menu-box {
   position: absolute;
   left: 20px;
+  top: 0;
   width: 40px;
-  height: 30px;
+  height: 40px;
   cursor: pointer;
 }
 
