@@ -19,5 +19,12 @@ $("#searchbar .search-label").on("click", function(e){
   $("#searchbar").toggleClass("collapsed");
 });//click
 //
+//
+$(function() {
+	$('#main-menu').smartmenus({
+		subMenusSubOffsetX: 0,
+		subMenusSubOffsetY: -5
+	});
+});
 });
 //jq end

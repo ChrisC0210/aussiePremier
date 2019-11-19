@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Assuie Premier</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/img/ap-favicon.ico">
   <link rel="stylesheet" href="./dist/style/all.min.css">
 </head>
 
@@ -32,51 +33,6 @@
             </select>
           </form>
         </div>
-      </div>
-    </div>
-    <div class="header-primary" id="HeaderFixed">
-      <div class="container d-flex header-primary-content">
-        <a href="./">
-          <img class="ap-logo" src="./assets/img/ap-logo.svg" alt="logo">
-        </a>
-        <ul class="menu-left text-r-1-4-1">
-          <li class="dropdown">
-            <button class="dropbtn">COLLECTIONS</button>
-            <div class="dropdown-content">
-              <a href="#">Kangaroo Island Eucalyptus</a>
-              <a href="#">Riverland Orange</a>
-              <a href="#">Organic Ligurian Honey</a>
-              <a href="#">Mt Macedon Rose</a>
-              <a href="#">Tasmanian Lavender</a>
-              <a href="#">Lord Howe Island</a>
-            </div>
-          </li>
-          <li><a href="#">POLICY</a></li>
-          <li><a href="#">CONTACT US</a></li>
-        </ul>
-        <ul class="menu-right">
-          <li><a href="#">
-              <img src="./assets/icon/icon-Search.svg" alt="icon-search">
-            </a>
-          </li>
-          <li class="menu-right-login"><a href="#">
-              <img src="./assets/icon/Icon-Login.svg" alt="icon-login">
-            </a>
-          </li>
-          <li><a href="#">
-              <img src="./assets/icon/Icon-Cart.svg" alt="Icon-Cart">
-            </a>
-          </li>
-        </ul>
-        <!-- burger menu start -->
-        <div class="burger-menu" onclick="burgerClick()">
-          <div class="burger-menu-box">
-            <span class="burger-menu-bar"></span>
-            <span class="burger-menu-bar"></span>
-            <span class="burger-menu-bar"></span>
-          </div>
-        </div>
-        <!-- burger menu end -->
       </div>
     </div>
   </header>
@@ -109,38 +65,21 @@
   <!-- banner end -->
   <!-- content start -->
   <div class="container">
-    <!-- do search start-->
-    <div id="searchbar" class="collapsed">
-      <div id="search-box" style="z-index: 999;">
-        <div id="sliding-panel-outer">
-          <div id="sliding-panel-inner">
-            <input type="text" id="search-input" />
-            <button id="search-submit">Search</button>
-          </div>
-          <!--#sliding-panel-inner-->
-        </div>
-        <!--#sliding-panel-outer-->
-        <div class="search-label">
-          <i class="fa fa-search"><img src="./assets/icon/icon-Search.svg" alt="icon-search"></i>
-          <i class="fa fa-times">X</i>
-        </div>
-      </div>
-      <!--#search-box-->
-    </div>
-    <!--#searchbar-->
-    <!-- do search end -->
     <div style="z-index: -1;">
       <div class="mt-4 mb-2 text-center text-y-5-4-5 gray-800">News</div>
       <div class="d-flex justify-content-center col-12 mb-4">
         <div class="news-box">
-            <div class="news-img"><img src="./assets/img/product/1.3.1-Honey.png" alt="news img"></div>
-            <div class="news-content gray-700">
-              <p class="text-r-2-5-2">ORGANIC LIGURIAN HONEY HAND & NAIL CREME 50ML</p>
-              <p class="text-r-1-4-1">INTENSELY RICH ORGANIC HONEY AND JOJOBA OIL NOURISH THE DELICATE SKIN OF YOUR HANDS SOFT AND PAMPERED.</p>
-              <p class="text-r-1-4-1">THE MELLOW, SUBTILE SWEETNESS OF PURE LIGURIAN HONEY IS INFUSED WITH THE COMPLEX VANILLA AND FRUIT-DRIVEN SCENTS OF ITALIAN BLOOD ORANGES.</p>
-              <p class="text-r-1-5-1">The first 30 people helping us to answer the questionnaire and will <span class="ap-orange-600">get 1 for Free !</span></p>
-              <button type="button" class="btn ap-orange-600 text-r-1-4-1">Answer Question</button>
-            </div>
+          <div class="news-img"><img src="./assets/img/product/1.3.1-Honey.png" alt="news img"></div>
+          <div class="news-content gray-700">
+            <p class="text-r-2-5-2">ORGANIC LIGURIAN HONEY HAND & NAIL CREME 50ML</p>
+            <p class="text-r-1-4-1">INTENSELY RICH ORGANIC HONEY AND JOJOBA OIL NOURISH THE DELICATE SKIN OF YOUR HANDS
+              SOFT AND PAMPERED.</p>
+            <p class="text-r-1-4-1">THE MELLOW, SUBTILE SWEETNESS OF PURE LIGURIAN HONEY IS INFUSED WITH THE COMPLEX
+              VANILLA AND FRUIT-DRIVEN SCENTS OF ITALIAN BLOOD ORANGES.</p>
+            <p class="text-r-1-5-1">The first 30 people helping us to answer the questionnaire and will <span
+                class="ap-orange-600">get 1 for Free !</span></p>
+            <button type="button" class="btn ap-orange-600 text-r-1-4-1">Answer Question</button>
+          </div>
         </div>
       </div>
     </div>
@@ -155,18 +94,7 @@
   <script src="./dist/js/popper.min.js"></script>
   <script src="./dist/js/bootstrap.min.js"></script>
   <script src="./dist/js/purecookie.js"></script>
+  <script src="./dist/js/jquery.smartmenus.js"></script>
   <script src="./dist/js/all.js"></script>
-  <script>
-    var screenTable = window.matchMedia('(max-width:800px)');
-    function burgerClick(screenTable) {
-      if (screenTable.matches) {
-        document.body.style.backgroundColor = 'red';
-      } else {
-        document.body.style.backgroundColor = 'yellow';
-      }
-    }
-    burgerClick(screenTable);
-    screenTable.addListener(burgerClick);
-    </script>
 
 </html>
