@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css?family=Yeseva+One&display=swap');
 //
 //typography
-$font: 16px 18px 20px 24px 32px 40px 48px;
+$font: 16px 18px 20px 24px 30px 40px 48px;
 
 @mixin font($index:1) {
   font-size: nth($font, $index);

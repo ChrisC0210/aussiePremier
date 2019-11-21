@@ -3,18 +3,19 @@
 // stylelint-disable
 $white:    #fefefe !default;
 $gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
+$gray-200: #F5F5F5 !default;
 $gray-300: #dee2e6 !default;
-$gray-400: #e5e5e5 !default;
+$gray-400: #D6D6D6 !default;
 $gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-600: #848383 !default;
 $gray-700: #707070 !default;
 $gray-800: #414141 !default;
 $gray-900: #212529 !default;
-$black:    #000 !default;
+$black:    #141414 !default;
 //
 //header defult color
 $ap-gray: #606060 !default;
+$ap-red: #AC4646 !default;
 //header hover color
 $ap-pink-200: #F4E2E3 !default;
 $ap-pink-600: #FBAFB8 !default;
@@ -40,6 +41,7 @@ $ap-yellow-600: #fee100 !default;
 .gray-900 {color:$gray-900;}
 .black  {color:$black;}
 .ap-gray  {color:$ap-gray;}
+.ap-red{color: $ap-red;}
 .ap-pink-200  {color:$ap-pink-200;}
 .ap-pink-600  {color:$ap-pink-600;}
 .ap-orange-200  {color:$ap-orange-200;}
