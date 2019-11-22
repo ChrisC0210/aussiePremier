@@ -9,7 +9,25 @@
   <link rel="shortcut icon" type="image/x-icon" href="./assets/img/ap-favicon.ico">
   <link rel="stylesheet" href="./dist/style/all.min.css">
 </head>
+<style>
+.slick-slide {
+  background: #3a8999;
+}
 
+.slick-arrow:before {
+  color: black;
+}
+
+.slick-dots {
+  bottom: -30px;
+  display: none;
+}
+
+.slick-slide:nth-child(odd) {
+  background: #e84a69;
+}
+
+</style>
 <body>
   <!-- header start -->
   <header>
@@ -51,7 +69,28 @@
     <!-- product start -->
     <div class="row">
       <div class="col-lg-5 col-sm-12 product-details">
-        <img class="" src="./assets/img/product/1.1.1-Eucalyptus.png" alt="">
+        <div class="col-12  slider slider-for">
+            <div>
+                <img src="./assets/img/product/1.1.1-Eucalyptus.png" alt="">
+            </div>
+            <div>
+                <img src="./assets/img/product/1.1.2-Eucalyptus.png" alt="">
+            </div>
+            <div>
+                <img src="./assets/img/product/1.1.2-Eucalyptus.png" alt="">
+            </div>
+        </div>
+        <div class="d-flex justify-content-start slider slider-nav"  style="width: 600px; height: 100%;">
+          <div>
+              <img style="max-width: 200px;max-height: 200px;" src="./assets/img/product/1.1.1-Eucalyptus.png" alt="">
+          </div>
+          <div>
+              <img style="max-width: 200px;max-height: 200px;" src="./assets/img/product/1.1.2-Eucalyptus.png" alt="">
+          </div>
+          <div>
+              <img style="max-width: 200px;max-height: 200px;" src="./assets/img/product/1.1.2-Eucalyptus.png" alt="">
+          </div>
+          </div>
       </div>
       <div class="col-lg-1"></div>
       <div class="row col-lg-6 col-sm-12">
@@ -141,5 +180,7 @@
 <script src="./dist/js/purecookie.js"></script>
 <script src="./dist/js/jquery.smartmenus.js"></script>
 <!-- <script src="./dist/js/all.js"></script> -->
+<script src="./dist/js/slick.min.js"></script>
+<script src="./dist/js/myTest.js"></script>
 
 </html>
