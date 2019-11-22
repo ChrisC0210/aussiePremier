@@ -9598,7 +9598,7 @@ a.text-dark:focus, a.text-dark:hover {
 
 .banner-text {
   position: absolute;
-  top: 160px;
+  top: 120px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -9609,7 +9609,7 @@ a.text-dark:focus, a.text-dark:hover {
 
 @media screen and (max-width: 800px) {
   .banner-text {
-    top: 130px;
+    top: 150px;
   }
 }
 
@@ -9664,9 +9664,16 @@ a.text-dark:focus, a.text-dark:hover {
 .product-details img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   padding: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  .product-details img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .footer-box {
@@ -9698,6 +9705,7 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .ap-primary-btn {
+  cursor: pointer;
   padding: 10px 0 10px 0;
   border-radius: 2px;
   background-color: #707070;
