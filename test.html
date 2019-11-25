@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/img/ap-favicon.ico">
+  <link rel="stylesheet" href="./dist/style/all.min.css">
+</head>
+<style>
+  .main-nav {
+    position: relative;
+    background: #3092c0;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4f4e79), color-stop(100%, #4b4a73));
+    background-image: -webkit-linear-gradient(top, #4f4e79, #4b4a73);
+    background-image: -moz-linear-gradient(to bottom, #4f4e79, #4b4a73);
+    background-image: -o-linear-gradient(to bottom, #4f4e79, #4b4a73);
+    background-image: linear-gradient(to bottom, #4f4e79, #4b4a73);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .main-nav:after {
+    clear: both;
+    content: "\00a0";
+    display: block;
+    height: 0;
+    font: 0px/0 serif;
+    overflow: hidden;
+  }
+
+  .nav-brand {
+    float: left;
+    margin: 0;
+  }
+
+  .nav-brand a {
+    display: block;
+    padding: 10px 10px 10px 20px;
+    color: #fff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 29px;
+    text-decoration: none;
+  }
+
+  #main-menu {
+    clear: both;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  @media (min-width: 768px) {
+    #main-menu {
+      float: right;
+      clear: none;
+      padding: 20px 0 0 0;
+    }
+  }
+
+
+  /* Mega menus */
+
+
+  /* make mega menus take the full width of .main-nav */
+
+  #main-menu,
+  #main-menu>.has-mega-menu {
+    position: static !important;
+  }
+
+  #main-menu .mega-menu {
+    margin-left: 0 !important;
+    right: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+  #main-menu>.has-mega-menu .scroll-up,
+  #main-menu>.has-mega-menu .scroll-down {
+    margin-left: 0 !important;
+  }
+
+
+  /* clear any floats inside the mega menus */
+
+  #main-menu .mega-menu>li {
+    overflow: auto;
+  }
+
+
+  /* reset mega menu list/link styles (which are inherited from the SmartMenus core/theme styles) */
+
+  #main-menu .mega-menu {
+    color: #353451;
+  }
+
+  #main-menu .mega-menu ul {
+    position: static;
+    display: block;
+    margin: 0.83em 0;
+    border: 0;
+    padding: 0 0 0 20px;
+    width: auto;
+    background: transparent;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  #main-menu .mega-menu ul li {
+    display: list-item;
+    list-style-type: disc;
+    border: 0;
+  }
+
+  #main-menu .mega-menu a {
+    display: inline;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    text-decoration: underline;
+  }
+
+
+  /* simple columns inside the mega menus */
+
+  #main-menu .mega-menu .column-1-3 {
+    padding: 0 20px;
+  }
+
+  @media (min-width: 768px) {
+    #main-menu .mega-menu .column-1-3 {
+      float: left;
+      width: 33.33%;
+    }
+  }
+
+
+  /* Sample image placeholder */
+
+  .mega-menu-sample-image {
+    margin: 0.83em 0;
+    border: 1px solid;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+  }
+
+
+  /* Mobile menu top separator */
+
+  #main-menu:before {
+    content: '';
+    display: block;
+    height: 1px;
+    font: 1px/1px sans-serif;
+    overflow: hidden;
+    background: #4b4a73;
+  }
+
+  @media (min-width: 768px) {
+    #main-menu:before {
+      display: none;
+    }
+  }
+
+
+  /* Mobile menu toggle button */
+  .main-menu-btn {
+    margin: 10px;
+    position: relative;
+    /* display: inline-block; */
+    float: right;
+    width: 29px;
+    height: 29px;
+    text-indent: 29px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+
+  /* hamburger icon */
+
+  .main-menu-btn-icon,
+  .main-menu-btn-icon:before,
+  .main-menu-btn-icon:after {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    height: 2px;
+    width: 24px;
+    background: #fff;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+  }
+
+  .main-menu-btn-icon:before {
+    content: '';
+    top: -7px;
+    left: 0;
+  }
+
+  .main-menu-btn-icon:after {
+    content: '';
+    top: 7px;
+    left: 0;
+  }
+
+
+  /* x icon */
+
+  #main-menu-state:checked~.main-menu-btn .main-menu-btn-icon {
+    height: 0;
+    background: transparent;
+  }
+
+  #main-menu-state:checked~.main-menu-btn .main-menu-btn-icon:before {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  #main-menu-state:checked~.main-menu-btn .main-menu-btn-icon:after {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+  /* hide menu state checkbox (keep it visible to screen readers) */
+
+  #main-menu-state {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+
+  /* hide the menu in mobile view */
+
+  #main-menu-state:not(:checked)~#main-menu {
+    display: none;
+  }
+
+  #main-menu-state:checked~#main-menu {
+    display: block;
+  }
+
+  @media (min-width: 800px) {
+
+    /* hide the button in desktop view */
+    .main-menu-btn {
+      position: absolute;
+      top: -99999px;
+    }
+
+    /* always show the menu in desktop view */
+    #main-menu-state:not(:checked)~#main-menu {
+      display: block;
+    }
+  }
+
+
+  /* IGNORE: Unrelated generic demo styles */
+
+  body {
+    margin: 8px;
+    background: #fff;
+    color: #aaa;
+    font: 16px/1.5em 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  .demo-text {
+    margin: 3em 22px;
+  }
+
+  .demo-text p {
+    margin-bottom: 1em;
+  }
+
+  .demo-text a {
+    color: #999;
+  }
+</style>
+
+<body>
+  <nav class="main-nav" role="navigation">
+
+    <!-- Mobile menu toggle button (hamburger/x icon) -->
+    <input id="main-menu-state" type="checkbox" />
+    <label class="main-menu-btn" for="main-menu-state">
+      <span class="main-menu-btn-icon"></span> Toggle main menu visibility
+    </label>
+    <h2 class="nav-brand">
+      <a href="./">
+        <img class="ap-logo" src="./assets/img/ap-logo.svg" alt="logo">
+      </a>
+    </h2>
+    <!-- Sample menu definition -->
+    <ul id="main-menu" class="sm sm-blue">
+      <li class="has-mega-menu"><a href="#">Mega 1</a>
+        <ul class="mega-menu">
+          <li>
+            <div class="column-1-3">
+              <h2>Heading 1</h2>
+              <div class="mega-menu-sample-image">Image</div>
+              <ul>
+                <li><a href="#">Regular link</a></li>
+                <li><a href="#">Regular link</a></li>
+                <li><a href="#">Regular link</a></li>
+                <li><a href="#">Regular link</a></li>
+              </ul>
+            </div>
+            <div class="column-1-3">
+              <h2>Heading 2</h2>
+              <ul>
+                <li><a href="#">Regular link</a></li>
+                <li><a href="#">Regular link</a></li>
+                <li><a href="#">Regular link</a></li>
+              </ul>
+              <h2>Heading 3</h2>
+              <ul>
+                <li><a href="#">Regular link</a></li>
+                <li><a href="#">Regular link</a></li>
+              </ul>
+            </div>
+            <div class="column-1-3">
+              <h2>Heading 4</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta
+                ac.</p>
+              <ul>
+                <li><a href="#">Regular link</a></li>
+                <li><a href="#">Regular link</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="has-mega-menu"><a href="#">Mega 2</a>
+        <ul class="mega-menu">
+          <li>
+            <div class="column-1-3">
+              <h2>Heading 1</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta
+                ac.</p>
+              <ul>
+                <li><a href="#">Regular link</a></li>
+                <li><a href="#">Regular link</a></li>
+              </ul>
+            </div>
+            <div class="column-1-3">
+              <h2>Heading 2</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta
+                ac.</p>
+              <ul>
+                <li><a href="#">Regular link</a></li>
+                <li><a href="#">Regular link</a></li>
+              </ul>
+            </div>
+            <div class="column-1-3">
+              <h2>Heading 3</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta
+                ac.</p>
+              <ul>
+                <li><a href="#">Regular link</a></li>
+                <li><a href="#">Regular link</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="has-mega-menu"><a href="http://www.smartmenus.org/download/">Mega 3</a>
+        <ul class="mega-menu">
+          <li>
+            <div class="column-1-3">
+              <h2>Heading 1</h2>
+              <div class="mega-menu-sample-image">Image</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta
+                ac.</p>
+            </div>
+            <div class="column-1-3">
+              <h2>Heading 2</h2>
+              <div class="mega-menu-sample-image">Image</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta
+                ac.</p>
+            </div>
+            <div class="column-1-3">
+              <h2>Heading 3</h2>
+              <div class="mega-menu-sample-image">Image</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta
+                ac.</p>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#">Regular sub</a>
+        <ul>
+          <li><a href="#">Dummy item</a></li>
+          <li><a href="#">Dummy item</a></li>
+          <li><a href="#" class="disabled">Disabled menu item</a></li>
+          <li><a href="#">Dummy item</a></li>
+          <li><a href="#">more...</a>
+            <ul>
+              <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a>
+              </li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">more...</a>
+                <ul>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#" class="current">A 'current' class item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">more...</a>
+                    <ul>
+                      <li><a href="#">subMenusMinWidth</a></li>
+                      <li><a href="#">10em</a></li>
+                      <li><a href="#">forced.</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Dummy item</a></li>
+                  <li><a href="#">Dummy item</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a>
+              </li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a>
+              </li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a>
+              </li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a>
+              </li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a>
+              </li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+              <li><a href="#">Dummy item</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="http://www.smartmenus.org/contact/">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="demo-text">
+    <p>Demonstrates a complete navbar including a mobile view menu toggle button (<a
+        href="http://www.smartmenus.org/docs/#menu-toggle-button">related docs</a>) and featuring full width mega sub
+      menus.</p>
+  </div>
+  <!-- header test start-->
+  <nav class="main-nav" role="navigation">
+
+    <!-- Mobile menu toggle button (hamburger/x icon) -->
+    <input id="main-menu-state" type="checkbox" />
+    <label class="main-menu-btn" for="main-menu-state">
+      <span class="main-menu-btn-icon"></span> Toggle main menu visibility
+    </label>
+    <h2 class="nav-brand">
+      <a href="./">
+        <img class="ap-logo" src="./assets/img/ap-logo.svg" alt="logo">
+      </a>
+    </h2>
+    <!-- Sample menu definition -->
+    <ul id="main-menu" class="menu-left text-r-1-4-1">
+      <li><a href="#">COLLECTIONS </a>
+        <ul>
+          <li><a href="#">Kangaroo Island Eucalyptus</a></li>
+          <li><a href="#">Riverland Orange</a></li>
+          <li><a href="#">Organic Ligurian Honey</a></li>
+          <li><a href="#">Mt Macedon Rose</a></li>
+          <li><a href="#">Tasmanian Lavender</a></li>
+          <li><a href="#">Lord Howe Island</a></li>
+        </ul>
+      </li>
+      <li><a href="#">POLICY</a></li>
+      <li><a href="#">CONTACT US</a></li>
+    </ul>
+    <ul class="menu-right">
+      <li><a href="#">
+          <img src="./assets/icon/icon-Search.svg" alt="icon-search">
+        </a>
+      </li>
+      <li class="menu-right-login"><a href="#">
+          <img src="./assets/icon/Icon-Login.svg" alt="icon-login">
+        </a>
+      </li>
+      <li><a href="#">
+          <img src="./assets/icon/Icon-Cart.svg" alt="Icon-Cart">
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="demo-text">
+    <p>Demonstrates a complete navbar including a mobile view menu toggle button (<a
+        href="http://www.smartmenus.org/docs/#menu-toggle-button">related docs</a>) and featuring full width mega sub
+      menus.</p>
+  </div>
+  <!-- header test end-->
+  <!-- footer -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./dist/js/popper.min.js"></script>
+  <script src="./dist/js/bootstrap.min.js"></script>
+  <script src="./dist/js/purecookie.js"></script>
+  <script src="./dist/js/jquery.smartmenus.js"></script>
+  <!-- <script src="./dist/js/all.js"></script> -->
+  <script>
+    $(document).ready(function () {
+      // SmartMenus init
+      $(function () {
+        $('#main-menu').smartmenus({
+          subMenusSubOffsetX: 1,
+          subMenusSubOffsetY: -8
+        });
+      });
+
+      // SmartMenus mobile menu toggle button
+      $(function () {
+        var $mainMenuState = $('#main-menu-state');
+        if ($mainMenuState.length) {
+          // animate mobile menu
+          $mainMenuState.change(function (e) {
+            var $menu = $('#main-menu');
+            if (this.checked) {
+              $menu.hide().slideDown(250, function () { $menu.css('display', ''); });
+            } else {
+              $menu.show().slideUp(250, function () { $menu.css('display', ''); });
+            }
+          });
+          // hide mobile menu beforeunload
+          $(window).bind('beforeunload unload', function () {
+            if ($mainMenuState[0].checked) {
+              $mainMenuState[0].click();
+            }
+          });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
