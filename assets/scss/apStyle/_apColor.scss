@@ -21,6 +21,7 @@ $ap-pink-200: #F4E2E3 !default;
 $ap-pink-600: #FBAFB8 !default;
 $ap-orange-200: #FAC6A4 !default;
 $ap-orange-600: #EC965E !default;
+$ap-brown-100: #E8E5E2 !default;
 $ap-brown-200: #EBD1B5 !default;
 $ap-brown-600: #886b4c !default;
 $ap-purple-200: #e7c8de !default;
@@ -45,7 +46,8 @@ $ap-yellow-600: #fee100 !default;
 .ap-pink-200  {color:$ap-pink-200;}
 .ap-pink-600  {color:$ap-pink-600;}
 .ap-orange-200  {color:$ap-orange-200;}
-.ap-orange-600  {color:$ap-orange-600;}
+.ap-orange-600  {color:$ap-orange-600;&:hover{color: $ap-orange-600;}}
+.ap-brown-100  {color:$ap-brown-100;}
 .ap-brown-200  {color:$ap-brown-200;}
 .ap-brown-600  {color:$ap-brown-600;}
 .ap-purple-200  {color:$ap-purple-200;}

@@ -9754,6 +9754,14 @@ a.text-dark:focus, a.text-dark:hover {
   color: #EC965E;
 }
 
+.ap-orange-600:hover {
+  color: #EC965E;
+}
+
+.ap-brown-100 {
+  color: #E8E5E2;
+}
+
 .ap-brown-200 {
   color: #EBD1B5;
 }
@@ -10258,6 +10266,12 @@ a.text-dark:focus, a.text-dark:hover {
   margin: 10px 0 0 0;
 }
 
+.form-border {
+  border: solid 2px #E6E6E6;
+  border-radius: 2px;
+  padding: 30px 20px 30px 20px;
+}
+
 .hemePage-img {
   height: 630px;
   width: 100%;
@@ -10403,6 +10417,42 @@ a.text-dark:focus, a.text-dark:hover {
 
 .ap-primary-btn:hover, .ap-primary-btn:active {
   background-color: #414141;
+}
+
+.login-btn {
+  background-color: #fefefe;
+  border-radius: 2px;
+  margin-right: 2px;
+}
+
+.login-btn a {
+  color: #848383;
+  padding: 14px 36px;
+}
+
+.login-btn .nav-link.active, .login-btn .show > .nav-link {
+  color: #414141;
+  background-color: #E8E5E2;
+}
+
+@media screen and (min-width: 1024px) {
+  .login-btn {
+    padding: 14px 10px;
+  }
+}
+
+.login-btn-send {
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 0 12px 0;
+  border-radius: 2px;
+  border: solid 1px #fefefe;
+  background-color: #707070;
+}
+
+.login-btn-send:hover, .login-btn-send:active {
+  background-color: #414141;
+  border: solid 1px #fefefe;
 }
 
 .test {
