@@ -39,4 +39,22 @@
   border: solid 2px #E6E6E6;
   border-radius: 2px;
   padding: 30px 20px 30px 20px;
+  max-width: 374px;
+  min-width: 374px;
+  @media screen and (max-width: 500px) {
+    border: solid 2px $white;
+  }
+  @media screen and (max-width: 400px) {
+    border: solid 2px $white;
+    min-width: 340px;
+  }
+}
+.img-user{
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user-name{
+  text-align: center;
 }

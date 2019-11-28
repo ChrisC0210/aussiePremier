@@ -10270,6 +10270,33 @@ a.text-dark:focus, a.text-dark:hover {
   border: solid 2px #E6E6E6;
   border-radius: 2px;
   padding: 30px 20px 30px 20px;
+  max-width: 374px;
+  min-width: 374px;
+}
+
+@media screen and (max-width: 500px) {
+  .form-border {
+    border: solid 2px #fefefe;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .form-border {
+    border: solid 2px #fefefe;
+    min-width: 340px;
+  }
+}
+
+.img-user {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.user-name {
+  text-align: center;
 }
 
 .hemePage-img {
@@ -10435,9 +10462,23 @@ a.text-dark:focus, a.text-dark:hover {
   background-color: #E8E5E2;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
+  .login-btn a {
+    padding: 14px 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .login-btn {
-    padding: 14px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .login-btn a {
+    padding: 14px 16px;
   }
 }
 
