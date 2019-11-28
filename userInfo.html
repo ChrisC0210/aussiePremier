@@ -59,11 +59,12 @@
   <!-- content end -->
   <!-- content start -->
   <div class="pt-4 pb-4" style="background-color: #FCFCFC;">
+    <form action=" ">
     <div class="d-flex justify-content-center">
       <div class="container row">
         <div class="col-lg-6 col-sm-12">
           <p>My Info</p>
-          <form class="gray-600 text-r-1-3-1">
+          <section class="gray-600 text-r-1-3-1">
             <div class="form-group">
               <label for="InputEmail1">Email address</label>
               <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder=" ">
@@ -100,59 +101,73 @@
             </div>
             <div class="form-group">
               <label for="InputConfirmFirstName">First Name *</label>
-              <input type="FirstName" class="form-control" id="InputConfirmFirstName" placeholder=" ">
+              <input type="text" class="form-control" id="InputConfirmFirstName" placeholder=" ">
             </div>
             <div class="form-group">
               <label for="InputConfirmLastName">Last Name * </label>
-              <input type="LastName" class="form-control" id="InputConfirmLastName" placeholder=" ">
+              <input type="text" class="form-control" id="InputConfirmLastName" placeholder=" ">
             </div>
             <div class="form-group">
               <label for="InputConfirmMobileNumber">Mobile Number</label>
-              <input type="MobileNumber" class="form-control" id="InputConfirmMobileNumber" placeholder=" ">
+              <input type="text" class="form-control" id="InputConfirmMobileNumber" placeholder=" ">
             </div>
             <div class="form-group">
               <label for="InputConfirmContactNumber">Contact Number * </label>
-              <input type="ContactNumber" class="form-control" id="InputConfirmContactNumber" placeholder=" ">
+              <input type="text" class="form-control" id="InputConfirmContactNumber" placeholder=" ">
             </div>
             <div class="form-group">
               <label for="InputConfirmCompanyName">Company Name *</label>
-              <input type="CompanyName" class="form-control" id="InputConfirmCompanyName" placeholder=" ">
+              <input type="text" class="form-control" id="InputConfirmCompanyName" placeholder=" ">
             </div>
             <div class="form-group">
               <label for="InputConfirmPosition">Position</label>
-              <input type="Position" class="form-control" id="InputConfirmPosition" placeholder=" ">
+              <input type="text" class="form-control" id="InputConfirmPosition" placeholder=" ">
             </div>
-          </form>
+          </section>
         </div>
         <div class="col-lg-6 col-sm-12">
           <p>Default Address</p>
-          <form class="gray-600 text-r-1-3-1">
+          <section class="gray-600 text-r-1-3-1">
             <div class="form-group">
               <label for="InputCountry">Country</label>
-              <input type="email" class="form-control" id="InputCountry"  placeholder=" ">
+              <select class="form-control" id="InputCountry">
+                <option selected>Select Your Country</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
             </div>
             <div class="form-group">
-              <label for="InputPassword1">Password</label>
-              <input type="password" class="form-control" id="InputPassword1" placeholder=" ">
+              <label for="InputRegion">Region</label>
+              <select class="form-control" id="InputRegion">
+                <option selected>Select Your Region</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
             </div>
             <div class="form-group">
-              <label for="InputConfirmFirstName">First Name *</label>
-              <input type="FirstName" class="form-control" id="InputConfirmFirstName" placeholder=" ">
+              <label for="inputPostalCode">Postal Code</label>
+              <input type="text" class="form-control" id="inputPostalCode">
             </div>
             <div class="form-group">
-              <label for="InputConfirmLastName">Last Name * </label>
-              <input type="LastName" class="form-control" id="InputConfirmLastName" placeholder=" ">
+              <label for="InputAddress">Address</label>
+              <textarea class="form-control" id="InputAddress" rows="7"></textarea>
             </div>
-          </form>
+          </section>
         </div>
       </div>
     </div>
     <div class="d-flex justify-content-center">
       <div class="col-lg-4 col-md-6 col-sm-12">
-        <button type="submit" class="btn btn-primary login-btn-send text-r-3-4-3">Save</button>
+        <button type="submit" class="gray-btn text-r-3-4-3">Save</button>
       </div>
     </div>
-
+  </form>
   </div>
   <!-- content end -->
   <!-- footer start -->

@@ -10496,6 +10496,21 @@ a.text-dark:focus, a.text-dark:hover {
   border: solid 1px #fefefe;
 }
 
+.gray-btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 0 12px 0;
+  border-radius: 2px;
+  border: solid 1px #fefefe;
+  background-color: #707070;
+  color: #fefefe;
+}
+
+.gray-btn:hover, .gray-btn:active {
+  background-color: #414141;
+  border: solid 1px #fefefe;
+}
+
 .test {
   height: 400px;
 }
