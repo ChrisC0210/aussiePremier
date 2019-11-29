@@ -8957,6 +8957,7 @@ a.text-dark:focus, a.text-dark:hover {
   }
   .sm-blue > li:first-child > a, .sm-blue > li:first-child > :not(ul) a {
     border-radius: 0px 0 0 0px;
+    top: 10px;
   }
   .sm-blue > li:last-child > a, .sm-blue > li:last-child > :not(ul) a {
     border-radius: 0 0px 0px 0 !important;
@@ -10176,8 +10177,24 @@ a.text-dark:focus, a.text-dark:hover {
   }
 }
 
+.ap-nav-logo-margin {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .ap-nav-logo-margin {
+    margin-right: 0px;
+  }
+}
+
 .ap-nav-margin {
   margin-right: 160px;
+}
+
+@media screen and (max-width: 800px) {
+  .ap-nav-margin {
+    margin-right: 0px;
+  }
 }
 
 #searchbar {

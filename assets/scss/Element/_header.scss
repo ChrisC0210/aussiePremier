@@ -278,6 +278,15 @@ $menu-animation-timing:   ease-out;
   }
 }
 //chris add 191129
+.ap-nav-logo-margin{
+  margin-left: 20px;
+  @media screen and (max-width: 800px) {
+    margin-right: 0px;
+  }
+}
 .ap-nav-margin{
   margin-right: 160px;
+  @media screen and (max-width: 800px) {
+    margin-right: 0px;
+  }
 }
