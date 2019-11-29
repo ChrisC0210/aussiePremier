@@ -57,3 +57,8 @@
     border: solid 1px #fefefe;
   }
 }
+.detailes-btn{
+  &:hover, &:active{
+    text-decoration: none;
+  }
+}
