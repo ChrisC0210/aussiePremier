@@ -10319,4 +10319,8 @@ a.text-dark:focus, a.text-dark:hover {
 .test {
   height: 400px;
 }
+
+.zoom {
+  display: inline-block;
+}
 /*# sourceMappingURL=all.css.map */

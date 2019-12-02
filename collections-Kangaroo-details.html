@@ -52,7 +52,10 @@
     <div class="row">
       <div class="col-lg-5 col-sm-12 product-details">
         <div class="col-12">
-          <img class="product-details-img" src="./assets/img/product/1.1.1-Eucalyptus.png" alt="">
+          <div class="col-12">
+            <span class='zoom' id='product-zoom'> 
+              <img src='./assets/img/product/1.1.1-Eucalyptus.png' id='jack' width='555' height='320' alt='Daisy on the Ohoopee'/>
+          </div>
         </div>
       </div>
       <div class="col-lg-1"></div>
@@ -157,7 +160,12 @@
 <script src="./dist/js/bootstrap.min.js"></script>
 <script src="./dist/js/purecookie.js"></script>
 <script src="./dist/js/jquery.smartmenus.js"></script>
+<script src="./dist/js/jquery.zoom.min.js"></script>
 <!-- <script src="./dist/js/all.js"></script> -->
-<script src="./dist/js/myTest.js"></script>
+<script>
+		$(document).ready(function(){
+			$('#product-zoom').zoom();
+		});
+	</script>
 
 </html>

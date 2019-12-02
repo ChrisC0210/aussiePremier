@@ -26,5 +26,7 @@ $(function() {
 		subMenusSubOffsetY: -5
 	});
 });
+//jQuery Zoom
+$('#product-zoom').zoom();
 });
 //jq end
