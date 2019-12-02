@@ -9950,6 +9950,7 @@ a.text-dark:focus, a.text-dark:hover {
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   height: 80px;
+  z-index: 99999;
 }
 
 @media screen and (max-width: 500px) {
@@ -10370,7 +10371,7 @@ a.text-dark:focus, a.text-dark:hover {
 
 .banner-text {
   position: absolute;
-  top: 120px;
+  top: 190px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -10387,7 +10388,7 @@ a.text-dark:focus, a.text-dark:hover {
 
 @media screen and (max-width: 500px) {
   .banner-text {
-    top: 100px;
+    top: 120px;
   }
 }
 
