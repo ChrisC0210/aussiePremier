@@ -285,8 +285,27 @@ $menu-animation-timing:   ease-out;
   }
 }
 .ap-nav-margin{
-  margin-right: 160px;
+  margin-right: 200px;
+  @media screen and (max-width: 1024px) {
+    margin-right: 70px;
+  }
   @media screen and (max-width: 800px) {
     margin-right: 0px;
   }
+}
+.ap-nav-img{
+  width: 40px;
+  //padding: 14px 5px;
+}
+//smartMenu
+//chris add
+//li child position
+.li-padding{
+  top: 10px;
+  @media screen and (max-width: 800px) {
+    top: 0px;
+  }
+}
+.main-menu-btn{
+  top: 10px;
 }

@@ -8752,23 +8752,19 @@ a.text-dark:focus, a.text-dark:hover {
   padding: 10px 20px;
   /* make room for the toggle button (sub indicator) */
   padding-right: 58px;
-  background: #4d4c76;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#4f4e79), to(#4b4a73));
-  background-image: linear-gradient(to bottom, #4f4e79, #4b4a73);
-  color: #fff;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  font-weight: normal;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fefefe));
+  background-image: linear-gradient(to bottom, #fefefe, #fefefe);
+  color: #707070;
   line-height: 23px;
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
 }
 
 .sm-blue a.current {
-  background: #2f2e47;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2c44), to(#31304b));
-  background-image: linear-gradient(to bottom, #2d2c44, #31304b);
-  color: #fff;
+  background: #fefefe;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fefefe));
+  background-image: linear-gradient(to bottom, #fefefe, #fefefe);
+  color: #707070;
 }
 
 .sm-blue a.disabled {
@@ -8831,7 +8827,7 @@ a.text-dark:focus, a.text-dark:hover {
   background: #2f2e47;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2c44), to(#31304b));
   background-image: linear-gradient(to bottom, #2d2c44, #31304b);
-  color: #fff;
+  color: #707070;
 }
 
 .sm-blue ul a.disabled {
@@ -8905,35 +8901,37 @@ a.text-dark:focus, a.text-dark:hover {
   }
   /* ...end */
   .sm-blue {
-    background: #4d4c76;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#4f4e79), to(#4b4a73));
-    background-image: linear-gradient(to bottom, #4f4e79, #4b4a73);
+    background: #fefefe;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fefefe));
+    background-image: linear-gradient(to bottom, #fefefe, #fefefe);
     border-radius: 0px;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   }
   .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
     padding: 14px 23px;
-    background: #4d4c76;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#4f4e79), to(#4b4a73));
-    background-image: linear-gradient(to bottom, #4f4e79, #4b4a73);
-    color: #fff;
+    background: #fefefe;
+    color: #707070;
+  }
+  .sm-blue img {
+    padding: 0px 0px;
+    margin: 0px -18px 0px -18px;
   }
   .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
-    background: #434266;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#45446a), to(#414063));
-    background-image: linear-gradient(to bottom, #45446a, #414063);
+    background: #fefefe;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#F5F5F5));
+    background-image: linear-gradient(to bottom, #F5F5F5, #F5F5F5);
   }
   .sm-blue a.current {
     background: #2f2e47;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2c44), to(#31304b));
     background-image: linear-gradient(to bottom, #2d2c44, #31304b);
-    color: #fff;
+    color: #707070;
   }
   .sm-blue a.disabled {
-    background: #4d4c76;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#4f4e79), to(#4b4a73));
-    background-image: linear-gradient(to bottom, #4f4e79, #4b4a73);
+    background: #fefefe;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fefefe));
+    background-image: linear-gradient(to bottom, #fefefe, #fefefe);
     color: #9d9cbf;
   }
   .sm-blue a .sub-arrow {
@@ -8956,13 +8954,12 @@ a.text-dark:focus, a.text-dark:hover {
   }
   .sm-blue > li:first-child > a, .sm-blue > li:first-child > :not(ul) a {
     border-radius: 0px 0 0 0px;
-    top: 10px;
   }
   .sm-blue > li:last-child > a, .sm-blue > li:last-child > :not(ul) a {
     border-radius: 0 0px 0px 0 !important;
   }
   .sm-blue > li {
-    border-left: 0px solid #434266;
+    border-left: 0px solid #fefefe;
   }
   .sm-blue > li:first-child {
     border-left: 0;
@@ -8987,10 +8984,7 @@ a.text-dark:focus, a.text-dark:hover {
     border-radius: 0 !important;
   }
   .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active, .sm-blue ul a.highlighted {
-    background: #4d4c76;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#4f4e79), to(#4b4a73));
-    background-image: linear-gradient(to bottom, #4f4e79, #4b4a73);
-    color: #fff;
+    background: #F5F5F5;
   }
   .sm-blue ul a.current {
     background: #2f2e47;
@@ -9055,7 +9049,7 @@ a.text-dark:focus, a.text-dark:hover {
     border-radius: 0px 0 0 0px !important;
   }
   .sm-blue.sm-rtl > li:first-child {
-    border-left: 0px solid #434266;
+    border-left: 0px solid #fefefe;
   }
   .sm-blue.sm-rtl > li:last-child {
     border-left: 0;
@@ -9917,13 +9911,37 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .ap-nav-margin {
-  margin-right: 160px;
+  margin-right: 200px;
+}
+
+@media screen and (max-width: 1024px) {
+  .ap-nav-margin {
+    margin-right: 70px;
+  }
 }
 
 @media screen and (max-width: 800px) {
   .ap-nav-margin {
     margin-right: 0px;
   }
+}
+
+.ap-nav-img {
+  width: 40px;
+}
+
+.li-padding {
+  top: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .li-padding {
+    top: 0px;
+  }
+}
+
+.main-menu-btn {
+  top: 10px;
 }
 
 #searchbar {
