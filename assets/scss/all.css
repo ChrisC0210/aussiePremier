@@ -9978,7 +9978,12 @@ a.text-dark:focus, a.text-dark:hover {
   border-radius: 2px;
   -webkit-box-shadow: 4px 4px 8px #D6D6D6;
           box-shadow: 4px 4px 8px #D6D6D6;
-  z-index: -1;
+  z-index: 10;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -10294,6 +10299,21 @@ a.text-dark:focus, a.text-dark:hover {
 
 .detailes-btn:hover, .detailes-btn:active {
   text-decoration: none;
+}
+
+.news-box-btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 12px 12px 12px;
+  border-radius: 2px;
+  color: #fefefe;
+  background-color: #EC965E;
+}
+
+.news-box-btn:hover, .news-box-btn:active {
+  text-decoration: none;
+  color: #EC965E;
+  background-color: #fefefe;
 }
 
 .test {

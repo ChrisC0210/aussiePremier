@@ -62,3 +62,16 @@
     text-decoration: none;
   }
 }
+.news-box-btn{
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 12px 12px 12px;
+  border-radius: 2px;
+  color: $white;
+  background-color: $ap-orange-600;
+  &:hover, &:active{
+    text-decoration: none;
+    color: $ap-orange-600;
+    background-color: $white;
+  }
+}
