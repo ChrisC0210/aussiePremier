@@ -10157,7 +10157,6 @@ a.text-dark:focus, a.text-dark:hover {
 
 .product-details {
   width: 440px;
-  height: 440px;
 }
 
 .product-details img {
@@ -10170,6 +10169,20 @@ a.text-dark:focus, a.text-dark:hover {
 
 @media screen and (max-width: 500px) {
   .product-details img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.product-details-img {
+  height: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  padding: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  .product-details-img {
     -o-object-fit: cover;
        object-fit: cover;
   }
