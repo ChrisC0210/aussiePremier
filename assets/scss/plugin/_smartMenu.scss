@@ -210,7 +210,8 @@
 }
 .sm-blue ul a, .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active {
   background: transparent;
-  color: #353451;
+  //color: #353451;
+  color: $gray-800;
   font-size: 16px;
   text-shadow: none;
   border-left: 8px solid transparent;
@@ -299,7 +300,7 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   }
   .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
-    padding: 14px 23px;
+    padding: 20px 23px;
     background: #fefefe;
     //background-image: linear-gradient(to bottom, #fefefe, #fefefe);
     color: #707070;
@@ -337,6 +338,8 @@
     border-color: #dadae7 transparent transparent transparent;
     background: transparent;
     border-radius: 0;
+    //chris add hide janto '>'
+    display: none;
   }
   .sm-blue a .sub-arrow::before {
     display: none;
@@ -370,7 +373,8 @@
     border: 0 !important;
     padding: 10px 23px;
     background: transparent;
-    color: #353451;
+    //color: #353451;
+    color: $gray-800;
     border-radius: 0 !important;
   }
   .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active, .sm-blue ul a.highlighted {

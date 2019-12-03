@@ -75,3 +75,28 @@
     background-color: $white;
   }
 }
+//search bar
+#searchBoxOpen{
+  display: none;
+}
+.search-box{
+  margin: 50px 0 50px 0;
+}
+.searchbar-box{
+  min-width: 450px;
+  //border-radius: 2px;
+  border: solid 1px $gray-500;
+  @media screen and (max-width: 500px) {
+    min-width: 160px;
+  }
+}
+.searchbar-box-btn{
+  min-width: 148px;
+  height: 40px;
+  color: $white;
+  border-radius: 2px;
+  padding: 4px 8px;
+  @media screen and (max-width: 500px) {
+    min-width: 80px;
+  }
+}

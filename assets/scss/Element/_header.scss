@@ -280,8 +280,16 @@ $menu-animation-timing:   ease-out;
 //chris add 191129
 .ap-nav-logo-margin{
   margin-left: 20px;
-  @media screen and (max-width: 800px) {
-    margin-right: 0px;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+   //border: 1px solid rgb(73, 31, 31);
+    margin: 0 auto;
+    a{
+      width: 150px;
+      //background: #ccc;
+      position: relative;
+      margin: auto;
+    }
   }
 }
 .ap-nav-margin{
@@ -306,17 +314,40 @@ $menu-animation-timing:   ease-out;
     top: 0px;
   }
 }
-.main-menu-btn{
-  top: 10px;
+//
+//
+.container-remove {
+  @media screen and (max-width: 500px) {
+    margin: 0 auto;
+    padding-right: 0px;
+    padding-left: 0px;
+    }
+}
+#header-shadow{
+  width: 100%;
+  background-color: $white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  z-index: 999999;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+//log in btn
+.login-btn-block{
+  display: none !important;
+  @media screen and (max-width: 500px) {
+    display: inline-block !important;
+  }
 }
 //
 //<style>
   .main-nav {
     position: relative;
     background: #fefefe;
-    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     height: 80px;
     z-index: 99999;
   }
@@ -474,17 +505,21 @@ $menu-animation-timing:   ease-out;
 
   /* Mobile menu toggle button */
   .main-menu-btn {
-    margin: 10px;
-    position: relative;
-    /* display: inline-block; */
+    //margin: 10px;
+    position: absolute;
+    //display: inline-block;
     float: left;
-    width: 29px;
-    height: 29px;
+    width: 48px;
+    height: 48px;
     text-indent: 29px;
     white-space: nowrap;
     overflow: hidden;
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    top: 14px;
+    left: 16px;
+    //background-color: #2d7e4c;
+    z-index: 999;
   }
 
 
@@ -495,7 +530,7 @@ $menu-animation-timing:   ease-out;
   .main-menu-btn-icon:after {
     position: absolute;
     top: 50%;
-    left: 2px;
+    left: 4px;
     height: 2px;
     width: 24px;
     background: #B9B9B9;
@@ -506,13 +541,13 @@ $menu-animation-timing:   ease-out;
   .main-menu-btn-icon:before {
     content: '';
     top: -7px;
-    left: 0;
+    left: 0px;
   }
 
   .main-menu-btn-icon:after {
     content: '';
     top: 7px;
-    left: 0;
+    left: 0px;
   }
 
 
@@ -571,20 +606,7 @@ $menu-animation-timing:   ease-out;
     /* always show the menu in desktop view */
     #main-menu-state:not(:checked)~#main-menu {
       display: block;
+      display: contents;
     }
-  }
-
-
-  /* IGNORE: Unrelated generic demo styles */
-  .demo-text {
-    margin: 3em 22px;
-  }
-
-  .demo-text p {
-    margin-bottom: 1em;
-  }
-
-  .demo-text a {
-    color: #999;
   }
 //</style>

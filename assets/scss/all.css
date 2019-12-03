@@ -8477,623 +8477,6 @@ a.text-dark:focus, a.text-dark:hover {
     border: 1px solid #ddd !important;
   }
 }
-.cookieConsentContainer {
-  z-index: 999;
-  width: 350px;
-  min-height: 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 30px 30px 30px 30px;
-  background: #232323;
-  overflow: hidden;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: none;
-  border-radius: 2px;
-}
-
-.cookieConsentContainer .cookieTitle a {
-  font-family: OpenSans, arial, "sans-serif";
-  color: #FFFFFF;
-  font-size: 22px;
-  line-height: 20px;
-  display: block;
-}
-
-.cookieConsentContainer .cookieDesc p {
-  margin: 0;
-  padding: 0;
-  font-family: OpenSans, arial, "sans-serif";
-  color: #FFFFFF;
-  font-size: 13px;
-  line-height: 20px;
-  display: block;
-  margin-top: 10px;
-}
-
-.cookieConsentContainer .cookieDesc a {
-  font-family: OpenSans, arial, "sans-serif";
-  color: #FFFFFF;
-  text-decoration: underline;
-}
-
-.cookieConsentContainer .cookieButton a {
-  display: inline-block;
-  font-family: OpenSans, arial, "sans-serif";
-  color: #FFFFFF;
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 14px;
-  background: #000000;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 15px 24px;
-  text-align: center;
-  -webkit-transition: background 0.3s;
-  transition: background 0.3s;
-  border-radius: 2px;
-}
-
-.cookieConsentContainer .cookieButton a:hover {
-  cursor: pointer;
-  background: #FFD700;
-}
-
-@media (max-width: 980px) {
-  .cookieConsentContainer {
-    bottom: 0px !important;
-    left: 0px !important;
-    width: 100%  !important;
-  }
-}
-
-/* Mobile first layout SmartMenus Core CSS (it's not recommended editing these rules)
-  You need this once per page no matter how many menu trees or different themes you use.
--------------------------------------------------------------------------------------------*/
-.sm {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  position: relative;
-  z-index: 9999;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.sm, .sm ul, .sm li {
-  display: block;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  line-height: normal;
-  direction: ltr;
-  text-align: left;
-}
-
-.sm-rtl, .sm-rtl ul, .sm-rtl li {
-  direction: rtl;
-  text-align: right;
-}
-
-.sm > li > h1, .sm > li > h2, .sm > li > h3, .sm > li > h4, .sm > li > h5, .sm > li > h6 {
-  margin: 0;
-  padding: 0;
-}
-
-.sm ul {
-  display: none;
-}
-
-.sm li, .sm a {
-  position: relative;
-}
-
-.sm a {
-  display: block;
-}
-
-.sm a.disabled {
-  cursor: default;
-}
-
-.sm::after {
-  content: "";
-  display: block;
-  height: 0;
-  font: 0px/0 serif;
-  clear: both;
-  overflow: hidden;
-}
-
-.sm *, .sm *::before, .sm *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-/*
- You probably do not need to edit this at all.
-
- Add some SmartMenus required styles not covered in Bootstrap 4's default CSS.
- These are theme independent and should work with any Bootstrap 4 theme mod.
-*/
-/* Carets in collapsible mode (make them look like +/- buttons) */
-.navbar-nav.sm-collapsible .sub-arrow {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin: -0.7em 0.5em 0 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: .25rem;
-  padding: 0;
-  width: 2em;
-  height: 1.4em;
-  font-size: 1.25rem;
-  line-height: 1.2em;
-  text-align: center;
-}
-
-.navbar-nav.sm-collapsible .sub-arrow::before {
-  content: '+';
-}
-
-.navbar-nav.sm-collapsible .show > a > .sub-arrow::before {
-  content: '-';
-}
-
-.navbar-dark .navbar-nav.sm-collapsible .nav-link .sub-arrow {
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-/* make sure there's room for the carets */
-.navbar-nav.sm-collapsible .has-submenu {
-  padding-right: 3em;
-}
-
-/* keep the carets properly positioned */
-.navbar-nav.sm-collapsible .nav-link,
-.navbar-nav.sm-collapsible .dropdown-item {
-  position: relative;
-}
-
-/* Nav carets in expanded mode */
-.navbar-nav:not(.sm-collapsible) .nav-link .sub-arrow {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: .255em;
-  vertical-align: .255em;
-  border-top: .3em solid;
-  border-right: .3em solid transparent;
-  border-left: .3em solid transparent;
-}
-
-/* point the arrows up for .fixed-bottom navbars */
-.fixed-bottom .navbar-nav:not(.sm-collapsible) .nav-link .sub-arrow,
-.fixed-bottom .navbar-nav:not(.sm-collapsible):not([data-sm-skip]) .dropdown-toggle::after {
-  border-top: 0;
-  border-bottom: .3em solid;
-}
-
-/* Dropdown carets in expanded mode */
-.navbar-nav:not(.sm-collapsible) .dropdown-item .sub-arrow,
-.navbar-nav:not(.sm-collapsible):not([data-sm-skip]) .dropdown-menu .dropdown-toggle::after {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 0;
-  height: 0;
-  margin-top: -.3em;
-  margin-right: 1em;
-  border-top: .3em solid transparent;
-  border-bottom: .3em solid transparent;
-  border-left: .3em solid;
-}
-
-/* make sure there's room for the carets */
-.navbar-nav:not(.sm-collapsible) .dropdown-item.has-submenu {
-  padding-right: 2em;
-}
-
-/* Scrolling arrows for tall menus */
-.navbar-nav .scroll-up,
-.navbar-nav .scroll-down {
-  position: absolute;
-  display: none;
-  visibility: hidden;
-  height: 20px;
-  overflow: hidden;
-  text-align: center;
-}
-
-.navbar-nav .scroll-up-arrow,
-.navbar-nav .scroll-down-arrow {
-  position: absolute;
-  top: -2px;
-  left: 50%;
-  margin-left: -8px;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  border-top: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid;
-  border-left: 7px solid transparent;
-}
-
-.navbar-nav .scroll-down-arrow {
-  top: 6px;
-  border-top: 7px solid;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 7px solid transparent;
-}
-
-/* Add some spacing for 2+ level sub menus in collapsible mode */
-.navbar-nav.sm-collapsible .dropdown-menu .dropdown-menu {
-  margin: .5em;
-}
-
-/* Fix SmartMenus sub menus auto width (subMenusMinWidth/subMenusMaxWidth options) */
-.navbar-nav:not([data-sm-skip]) .dropdown-item {
-  white-space: normal;
-}
-
-.navbar-nav:not(.sm-collapsible) .sm-nowrap > li > .dropdown-item {
-  white-space: nowrap;
-}
-
-.sm-blue {
-  background: transparent;
-  border-radius: 0px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-}
-
-.sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active {
-  padding: 10px 20px;
-  /* make room for the toggle button (sub indicator) */
-  padding-right: 58px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fefefe));
-  background-image: linear-gradient(to bottom, #fefefe, #fefefe);
-  color: #707070;
-  line-height: 23px;
-  text-decoration: none;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
-}
-
-.sm-blue a.current {
-  background: #fefefe;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fefefe));
-  background-image: linear-gradient(to bottom, #fefefe, #fefefe);
-  color: #707070;
-}
-
-.sm-blue a.disabled {
-  color: #9d9cbf;
-}
-
-.sm-blue a .sub-arrow {
-  position: absolute;
-  top: 50%;
-  margin-top: -17px;
-  left: auto;
-  right: 4px;
-  width: 34px;
-  height: 34px;
-  overflow: hidden;
-  font: bold 16px/34px monospace !important;
-  text-align: center;
-  text-shadow: none;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 0px;
-}
-
-.sm-blue a .sub-arrow::before {
-  content: '+';
-}
-
-.sm-blue a.highlighted .sub-arrow::before {
-  content: '-';
-}
-
-.sm-blue > li:first-child > a, .sm-blue > li:first-child > :not(ul) a {
-  border-radius: 0px 0px 0 0;
-}
-
-.sm-blue > li:last-child > a, .sm-blue > li:last-child > *:not(ul) a, .sm-blue > li:last-child > ul, .sm-blue > li:last-child > ul > li:last-child > a, .sm-blue > li:last-child > ul > li:last-child > *:not(ul) a, .sm-blue > li:last-child > ul > li:last-child > ul, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > a, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul {
-  border-radius: 0 0 0px 0px;
-}
-
-.sm-blue > li:last-child > a.highlighted, .sm-blue > li:last-child > *:not(ul) a.highlighted, .sm-blue > li:last-child > ul > li:last-child > a.highlighted, .sm-blue > li:last-child > ul > li:last-child > *:not(ul) a.highlighted, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > a.highlighted, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a.highlighted, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a.highlighted, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a.highlighted, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a.highlighted, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a.highlighted {
-  border-radius: 0;
-}
-
-.sm-blue ul {
-  background: #fff;
-}
-
-.sm-blue ul ul {
-  background: rgba(102, 102, 102, 0.1);
-}
-
-.sm-blue ul a, .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active {
-  background: transparent;
-  color: #353451;
-  font-size: 16px;
-  text-shadow: none;
-  border-left: 8px solid transparent;
-}
-
-.sm-blue ul a.current {
-  background: #2f2e47;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2c44), to(#31304b));
-  background-image: linear-gradient(to bottom, #2d2c44, #31304b);
-  color: #707070;
-}
-
-.sm-blue ul a.disabled {
-  color: #b3b3b3;
-}
-
-.sm-blue ul ul a,
-.sm-blue ul ul a:hover,
-.sm-blue ul ul a:focus,
-.sm-blue ul ul a:active {
-  border-left: 16px solid transparent;
-}
-
-.sm-blue ul ul ul a,
-.sm-blue ul ul ul a:hover,
-.sm-blue ul ul ul a:focus,
-.sm-blue ul ul ul a:active {
-  border-left: 24px solid transparent;
-}
-
-.sm-blue ul ul ul ul a,
-.sm-blue ul ul ul ul a:hover,
-.sm-blue ul ul ul ul a:focus,
-.sm-blue ul ul ul ul a:active {
-  border-left: 32px solid transparent;
-}
-
-.sm-blue ul ul ul ul ul a,
-.sm-blue ul ul ul ul ul a:hover,
-.sm-blue ul ul ul ul ul a:focus,
-.sm-blue ul ul ul ul ul a:active {
-  border-left: 40px solid transparent;
-}
-
-.sm-blue ul li {
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.sm-blue ul li:first-child {
-  border-top: 0;
-}
-
-@media (min-width: 768px) {
-  /* Switch to desktop layout
-  -----------------------------------------------
-     These transform the menu tree from
-     collapsible to desktop (navbar + dropdowns)
-  -----------------------------------------------*/
-  /* start... (it's not recommended editing these rules) */
-  .sm-blue ul {
-    position: absolute;
-    width: 12em;
-  }
-  .sm-blue li {
-    float: left;
-  }
-  .sm-blue.sm-rtl li {
-    float: right;
-  }
-  .sm-blue ul li, .sm-blue.sm-rtl ul li, .sm-blue.sm-vertical li {
-    float: none;
-  }
-  .sm-blue a {
-    white-space: nowrap;
-  }
-  .sm-blue ul a, .sm-blue.sm-vertical a {
-    white-space: normal;
-  }
-  .sm-blue .sm-nowrap > li > a, .sm-blue .sm-nowrap > li > :not(ul) a {
-    white-space: nowrap;
-  }
-  /* ...end */
-  .sm-blue {
-    background: #fefefe;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fefefe));
-    background-image: linear-gradient(to bottom, #fefefe, #fefefe);
-    border-radius: 0px;
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  }
-  .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
-    padding: 14px 23px;
-    background: #fefefe;
-    color: #707070;
-  }
-  .sm-blue img {
-    padding: 0px 0px;
-    margin: 0px -18px 0px -18px;
-  }
-  .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
-    background: #fefefe;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#F5F5F5));
-    background-image: linear-gradient(to bottom, #F5F5F5, #F5F5F5);
-  }
-  .sm-blue a.current {
-    background: #2f2e47;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2c44), to(#31304b));
-    background-image: linear-gradient(to bottom, #2d2c44, #31304b);
-    color: #707070;
-  }
-  .sm-blue a.disabled {
-    background: #fefefe;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fefefe));
-    background-image: linear-gradient(to bottom, #fefefe, #fefefe);
-    color: #9d9cbf;
-  }
-  .sm-blue a .sub-arrow {
-    top: auto;
-    margin-top: 0;
-    bottom: 2px;
-    left: 50%;
-    margin-left: -5px;
-    right: auto;
-    width: 0;
-    height: 0;
-    border-width: 5px;
-    border-style: solid dashed dashed dashed;
-    border-color: #dadae7 transparent transparent transparent;
-    background: transparent;
-    border-radius: 0;
-  }
-  .sm-blue a .sub-arrow::before {
-    display: none;
-  }
-  .sm-blue > li:first-child > a, .sm-blue > li:first-child > :not(ul) a {
-    border-radius: 0px 0 0 0px;
-  }
-  .sm-blue > li:last-child > a, .sm-blue > li:last-child > :not(ul) a {
-    border-radius: 0 0px 0px 0 !important;
-  }
-  .sm-blue > li {
-    border-left: 0px solid #fefefe;
-  }
-  .sm-blue > li:first-child {
-    border-left: 0;
-  }
-  .sm-blue ul {
-    border: 0px solid #a8a8a8;
-    padding: 5px 0;
-    background: #fff;
-    border-radius: 0 0 0px 0px !important;
-    -webkit-box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
-  }
-  .sm-blue ul ul {
-    border-radius: 0px !important;
-    background: #fff;
-  }
-  .sm-blue ul a, .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active, .sm-blue ul a.highlighted {
-    border: 0 !important;
-    padding: 10px 23px;
-    background: transparent;
-    color: #353451;
-    border-radius: 0 !important;
-  }
-  .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active, .sm-blue ul a.highlighted {
-    background: #F5F5F5;
-  }
-  .sm-blue ul a.current {
-    background: #2f2e47;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2c44), to(#31304b));
-    background-image: linear-gradient(to bottom, #2d2c44, #31304b);
-    color: #fff;
-  }
-  .sm-blue ul a.disabled {
-    background: #fff;
-    color: #b3b3b3;
-  }
-  .sm-blue ul a .sub-arrow {
-    top: 50%;
-    margin-top: -5px;
-    bottom: auto;
-    left: auto;
-    margin-left: 0;
-    right: 10px;
-    border-style: dashed dashed dashed solid;
-    border-color: transparent transparent transparent #dadae7;
-  }
-  .sm-blue ul li {
-    border: 0;
-  }
-  .sm-blue .scroll-up,
-  .sm-blue .scroll-down {
-    position: absolute;
-    display: none;
-    visibility: hidden;
-    overflow: hidden;
-    background: #fff;
-    height: 20px;
-  }
-  .sm-blue .scroll-up-arrow,
-  .sm-blue .scroll-down-arrow {
-    position: absolute;
-    top: -2px;
-    left: 50%;
-    margin-left: -8px;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    border-width: 8px;
-    border-style: dashed dashed solid dashed;
-    border-color: transparent transparent #353451 transparent;
-  }
-  .sm-blue .scroll-down-arrow {
-    top: 6px;
-    border-style: solid dashed dashed dashed;
-    border-color: #353451 transparent transparent transparent;
-  }
-  .sm-blue.sm-rtl.sm-vertical a .sub-arrow {
-    right: auto;
-    left: 10px;
-    border-style: dashed solid dashed dashed;
-    border-color: transparent #dadae7 transparent transparent;
-  }
-  .sm-blue.sm-rtl > li:first-child > a, .sm-blue.sm-rtl > li:first-child > :not(ul) a {
-    border-radius: 0 0px 0px 0;
-  }
-  .sm-blue.sm-rtl > li:last-child > a, .sm-blue.sm-rtl > li:last-child > :not(ul) a {
-    border-radius: 0px 0 0 0px !important;
-  }
-  .sm-blue.sm-rtl > li:first-child {
-    border-left: 0px solid #fefefe;
-  }
-  .sm-blue.sm-rtl > li:last-child {
-    border-left: 0;
-  }
-  .sm-blue.sm-rtl ul a .sub-arrow {
-    right: auto;
-    left: 10px;
-    border-style: dashed solid dashed dashed;
-    border-color: transparent #dadae7 transparent transparent;
-  }
-  .sm-blue.sm-vertical {
-    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  }
-  .sm-blue.sm-vertical a {
-    padding: 9px 23px;
-  }
-  .sm-blue.sm-vertical a .sub-arrow {
-    top: 50%;
-    margin-top: -5px;
-    bottom: auto;
-    left: auto;
-    margin-left: 0;
-    right: 10px;
-    border-style: dashed dashed dashed solid;
-    border-color: transparent transparent transparent #dadae7;
-  }
-  .sm-blue.sm-vertical > li:first-child > a, .sm-blue.sm-vertical > li:first-child > :not(ul) a {
-    border-radius: 0px 0px 0 0;
-  }
-  .sm-blue.sm-vertical > li:last-child > a, .sm-blue.sm-vertical > li:last-child > :not(ul) a {
-    border-radius: 0 0 0px 0px !important;
-  }
-  .sm-blue.sm-vertical > li {
-    border-left: 0 !important;
-  }
-  .sm-blue.sm-vertical ul {
-    border-radius: 0px !important;
-  }
-  .sm-blue.sm-vertical ul a {
-    padding: 10px 23px;
-  }
-}
-
 .text-bold {
   font-weight: 500 !important;
 }
@@ -9514,6 +8897,624 @@ a.text-dark:focus, a.text-dark:hover {
   background-color: #E8E5E2;
 }
 
+.cookieConsentContainer {
+  z-index: 999;
+  width: 350px;
+  min-height: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px 30px 30px 30px;
+  background: #232323;
+  overflow: hidden;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  border-radius: 2px;
+}
+
+.cookieConsentContainer .cookieTitle a {
+  font-family: OpenSans, arial, "sans-serif";
+  color: #FFFFFF;
+  font-size: 22px;
+  line-height: 20px;
+  display: block;
+}
+
+.cookieConsentContainer .cookieDesc p {
+  margin: 0;
+  padding: 0;
+  font-family: OpenSans, arial, "sans-serif";
+  color: #FFFFFF;
+  font-size: 13px;
+  line-height: 20px;
+  display: block;
+  margin-top: 10px;
+}
+
+.cookieConsentContainer .cookieDesc a {
+  font-family: OpenSans, arial, "sans-serif";
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.cookieConsentContainer .cookieButton a {
+  display: inline-block;
+  font-family: OpenSans, arial, "sans-serif";
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 14px;
+  background: #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px 24px;
+  text-align: center;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  border-radius: 2px;
+}
+
+.cookieConsentContainer .cookieButton a:hover {
+  cursor: pointer;
+  background: #FFD700;
+}
+
+@media (max-width: 980px) {
+  .cookieConsentContainer {
+    bottom: 0px !important;
+    left: 0px !important;
+    width: 100%  !important;
+  }
+}
+
+/* Mobile first layout SmartMenus Core CSS (it's not recommended editing these rules)
+  You need this once per page no matter how many menu trees or different themes you use.
+-------------------------------------------------------------------------------------------*/
+.sm {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  z-index: 9999;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.sm, .sm ul, .sm li {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  direction: ltr;
+  text-align: left;
+}
+
+.sm-rtl, .sm-rtl ul, .sm-rtl li {
+  direction: rtl;
+  text-align: right;
+}
+
+.sm > li > h1, .sm > li > h2, .sm > li > h3, .sm > li > h4, .sm > li > h5, .sm > li > h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.sm ul {
+  display: none;
+}
+
+.sm li, .sm a {
+  position: relative;
+}
+
+.sm a {
+  display: block;
+}
+
+.sm a.disabled {
+  cursor: default;
+}
+
+.sm::after {
+  content: "";
+  display: block;
+  height: 0;
+  font: 0px/0 serif;
+  clear: both;
+  overflow: hidden;
+}
+
+.sm *, .sm *::before, .sm *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/*
+ You probably do not need to edit this at all.
+
+ Add some SmartMenus required styles not covered in Bootstrap 4's default CSS.
+ These are theme independent and should work with any Bootstrap 4 theme mod.
+*/
+/* Carets in collapsible mode (make them look like +/- buttons) */
+.navbar-nav.sm-collapsible .sub-arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin: -0.7em 0.5em 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  padding: 0;
+  width: 2em;
+  height: 1.4em;
+  font-size: 1.25rem;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+.navbar-nav.sm-collapsible .sub-arrow::before {
+  content: '+';
+}
+
+.navbar-nav.sm-collapsible .show > a > .sub-arrow::before {
+  content: '-';
+}
+
+.navbar-dark .navbar-nav.sm-collapsible .nav-link .sub-arrow {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* make sure there's room for the carets */
+.navbar-nav.sm-collapsible .has-submenu {
+  padding-right: 3em;
+}
+
+/* keep the carets properly positioned */
+.navbar-nav.sm-collapsible .nav-link,
+.navbar-nav.sm-collapsible .dropdown-item {
+  position: relative;
+}
+
+/* Nav carets in expanded mode */
+.navbar-nav:not(.sm-collapsible) .nav-link .sub-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: .255em;
+  vertical-align: .255em;
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-left: .3em solid transparent;
+}
+
+/* point the arrows up for .fixed-bottom navbars */
+.fixed-bottom .navbar-nav:not(.sm-collapsible) .nav-link .sub-arrow,
+.fixed-bottom .navbar-nav:not(.sm-collapsible):not([data-sm-skip]) .dropdown-toggle::after {
+  border-top: 0;
+  border-bottom: .3em solid;
+}
+
+/* Dropdown carets in expanded mode */
+.navbar-nav:not(.sm-collapsible) .dropdown-item .sub-arrow,
+.navbar-nav:not(.sm-collapsible):not([data-sm-skip]) .dropdown-menu .dropdown-toggle::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin-top: -.3em;
+  margin-right: 1em;
+  border-top: .3em solid transparent;
+  border-bottom: .3em solid transparent;
+  border-left: .3em solid;
+}
+
+/* make sure there's room for the carets */
+.navbar-nav:not(.sm-collapsible) .dropdown-item.has-submenu {
+  padding-right: 2em;
+}
+
+/* Scrolling arrows for tall menus */
+.navbar-nav .scroll-up,
+.navbar-nav .scroll-down {
+  position: absolute;
+  display: none;
+  visibility: hidden;
+  height: 20px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.navbar-nav .scroll-up-arrow,
+.navbar-nav .scroll-down-arrow {
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  margin-left: -8px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-top: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid;
+  border-left: 7px solid transparent;
+}
+
+.navbar-nav .scroll-down-arrow {
+  top: 6px;
+  border-top: 7px solid;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+
+/* Add some spacing for 2+ level sub menus in collapsible mode */
+.navbar-nav.sm-collapsible .dropdown-menu .dropdown-menu {
+  margin: .5em;
+}
+
+/* Fix SmartMenus sub menus auto width (subMenusMinWidth/subMenusMaxWidth options) */
+.navbar-nav:not([data-sm-skip]) .dropdown-item {
+  white-space: normal;
+}
+
+.navbar-nav:not(.sm-collapsible) .sm-nowrap > li > .dropdown-item {
+  white-space: nowrap;
+}
+
+.sm-blue {
+  background: transparent;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active {
+  padding: 10px 20px;
+  /* make room for the toggle button (sub indicator) */
+  padding-right: 58px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fefefe));
+  background-image: linear-gradient(to bottom, #fefefe, #fefefe);
+  color: #707070;
+  line-height: 23px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+}
+
+.sm-blue a.current {
+  background: #fefefe;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fefefe));
+  background-image: linear-gradient(to bottom, #fefefe, #fefefe);
+  color: #707070;
+}
+
+.sm-blue a.disabled {
+  color: #9d9cbf;
+}
+
+.sm-blue a .sub-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
+  left: auto;
+  right: 4px;
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+  font: bold 16px/34px monospace !important;
+  text-align: center;
+  text-shadow: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0px;
+}
+
+.sm-blue a .sub-arrow::before {
+  content: '+';
+}
+
+.sm-blue a.highlighted .sub-arrow::before {
+  content: '-';
+}
+
+.sm-blue > li:first-child > a, .sm-blue > li:first-child > :not(ul) a {
+  border-radius: 0px 0px 0 0;
+}
+
+.sm-blue > li:last-child > a, .sm-blue > li:last-child > *:not(ul) a, .sm-blue > li:last-child > ul, .sm-blue > li:last-child > ul > li:last-child > a, .sm-blue > li:last-child > ul > li:last-child > *:not(ul) a, .sm-blue > li:last-child > ul > li:last-child > ul, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > a, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul {
+  border-radius: 0 0 0px 0px;
+}
+
+.sm-blue > li:last-child > a.highlighted, .sm-blue > li:last-child > *:not(ul) a.highlighted, .sm-blue > li:last-child > ul > li:last-child > a.highlighted, .sm-blue > li:last-child > ul > li:last-child > *:not(ul) a.highlighted, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > a.highlighted, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a.highlighted, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a.highlighted, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a.highlighted, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a.highlighted, .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a.highlighted {
+  border-radius: 0;
+}
+
+.sm-blue ul {
+  background: #fff;
+}
+
+.sm-blue ul ul {
+  background: rgba(102, 102, 102, 0.1);
+}
+
+.sm-blue ul a, .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active {
+  background: transparent;
+  color: #414141;
+  font-size: 16px;
+  text-shadow: none;
+  border-left: 8px solid transparent;
+}
+
+.sm-blue ul a.current {
+  background: #2f2e47;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2c44), to(#31304b));
+  background-image: linear-gradient(to bottom, #2d2c44, #31304b);
+  color: #707070;
+}
+
+.sm-blue ul a.disabled {
+  color: #b3b3b3;
+}
+
+.sm-blue ul ul a,
+.sm-blue ul ul a:hover,
+.sm-blue ul ul a:focus,
+.sm-blue ul ul a:active {
+  border-left: 16px solid transparent;
+}
+
+.sm-blue ul ul ul a,
+.sm-blue ul ul ul a:hover,
+.sm-blue ul ul ul a:focus,
+.sm-blue ul ul ul a:active {
+  border-left: 24px solid transparent;
+}
+
+.sm-blue ul ul ul ul a,
+.sm-blue ul ul ul ul a:hover,
+.sm-blue ul ul ul ul a:focus,
+.sm-blue ul ul ul ul a:active {
+  border-left: 32px solid transparent;
+}
+
+.sm-blue ul ul ul ul ul a,
+.sm-blue ul ul ul ul ul a:hover,
+.sm-blue ul ul ul ul ul a:focus,
+.sm-blue ul ul ul ul ul a:active {
+  border-left: 40px solid transparent;
+}
+
+.sm-blue ul li {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sm-blue ul li:first-child {
+  border-top: 0;
+}
+
+@media (min-width: 768px) {
+  /* Switch to desktop layout
+  -----------------------------------------------
+     These transform the menu tree from
+     collapsible to desktop (navbar + dropdowns)
+  -----------------------------------------------*/
+  /* start... (it's not recommended editing these rules) */
+  .sm-blue ul {
+    position: absolute;
+    width: 12em;
+  }
+  .sm-blue li {
+    float: left;
+  }
+  .sm-blue.sm-rtl li {
+    float: right;
+  }
+  .sm-blue ul li, .sm-blue.sm-rtl ul li, .sm-blue.sm-vertical li {
+    float: none;
+  }
+  .sm-blue a {
+    white-space: nowrap;
+  }
+  .sm-blue ul a, .sm-blue.sm-vertical a {
+    white-space: normal;
+  }
+  .sm-blue .sm-nowrap > li > a, .sm-blue .sm-nowrap > li > :not(ul) a {
+    white-space: nowrap;
+  }
+  /* ...end */
+  .sm-blue {
+    background: #fefefe;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fefefe));
+    background-image: linear-gradient(to bottom, #fefefe, #fefefe);
+    border-radius: 0px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  }
+  .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
+    padding: 20px 23px;
+    background: #fefefe;
+    color: #707070;
+  }
+  .sm-blue img {
+    padding: 0px 0px;
+    margin: 0px -18px 0px -18px;
+  }
+  .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
+    background: #fefefe;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#F5F5F5));
+    background-image: linear-gradient(to bottom, #F5F5F5, #F5F5F5);
+  }
+  .sm-blue a.current {
+    background: #2f2e47;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2c44), to(#31304b));
+    background-image: linear-gradient(to bottom, #2d2c44, #31304b);
+    color: #707070;
+  }
+  .sm-blue a.disabled {
+    background: #fefefe;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fefefe));
+    background-image: linear-gradient(to bottom, #fefefe, #fefefe);
+    color: #9d9cbf;
+  }
+  .sm-blue a .sub-arrow {
+    top: auto;
+    margin-top: 0;
+    bottom: 2px;
+    left: 50%;
+    margin-left: -5px;
+    right: auto;
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    border-style: solid dashed dashed dashed;
+    border-color: #dadae7 transparent transparent transparent;
+    background: transparent;
+    border-radius: 0;
+    display: none;
+  }
+  .sm-blue a .sub-arrow::before {
+    display: none;
+  }
+  .sm-blue > li:first-child > a, .sm-blue > li:first-child > :not(ul) a {
+    border-radius: 0px 0 0 0px;
+  }
+  .sm-blue > li:last-child > a, .sm-blue > li:last-child > :not(ul) a {
+    border-radius: 0 0px 0px 0 !important;
+  }
+  .sm-blue > li {
+    border-left: 0px solid #fefefe;
+  }
+  .sm-blue > li:first-child {
+    border-left: 0;
+  }
+  .sm-blue ul {
+    border: 0px solid #a8a8a8;
+    padding: 5px 0;
+    background: #fff;
+    border-radius: 0 0 0px 0px !important;
+    -webkit-box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+  }
+  .sm-blue ul ul {
+    border-radius: 0px !important;
+    background: #fff;
+  }
+  .sm-blue ul a, .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active, .sm-blue ul a.highlighted {
+    border: 0 !important;
+    padding: 10px 23px;
+    background: transparent;
+    color: #414141;
+    border-radius: 0 !important;
+  }
+  .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active, .sm-blue ul a.highlighted {
+    background: #F5F5F5;
+  }
+  .sm-blue ul a.current {
+    background: #2f2e47;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#2d2c44), to(#31304b));
+    background-image: linear-gradient(to bottom, #2d2c44, #31304b);
+    color: #fff;
+  }
+  .sm-blue ul a.disabled {
+    background: #fff;
+    color: #b3b3b3;
+  }
+  .sm-blue ul a .sub-arrow {
+    top: 50%;
+    margin-top: -5px;
+    bottom: auto;
+    left: auto;
+    margin-left: 0;
+    right: 10px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent #dadae7;
+  }
+  .sm-blue ul li {
+    border: 0;
+  }
+  .sm-blue .scroll-up,
+  .sm-blue .scroll-down {
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    overflow: hidden;
+    background: #fff;
+    height: 20px;
+  }
+  .sm-blue .scroll-up-arrow,
+  .sm-blue .scroll-down-arrow {
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-width: 8px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent #353451 transparent;
+  }
+  .sm-blue .scroll-down-arrow {
+    top: 6px;
+    border-style: solid dashed dashed dashed;
+    border-color: #353451 transparent transparent transparent;
+  }
+  .sm-blue.sm-rtl.sm-vertical a .sub-arrow {
+    right: auto;
+    left: 10px;
+    border-style: dashed solid dashed dashed;
+    border-color: transparent #dadae7 transparent transparent;
+  }
+  .sm-blue.sm-rtl > li:first-child > a, .sm-blue.sm-rtl > li:first-child > :not(ul) a {
+    border-radius: 0 0px 0px 0;
+  }
+  .sm-blue.sm-rtl > li:last-child > a, .sm-blue.sm-rtl > li:last-child > :not(ul) a {
+    border-radius: 0px 0 0 0px !important;
+  }
+  .sm-blue.sm-rtl > li:first-child {
+    border-left: 0px solid #fefefe;
+  }
+  .sm-blue.sm-rtl > li:last-child {
+    border-left: 0;
+  }
+  .sm-blue.sm-rtl ul a .sub-arrow {
+    right: auto;
+    left: 10px;
+    border-style: dashed solid dashed dashed;
+    border-color: transparent #dadae7 transparent transparent;
+  }
+  .sm-blue.sm-vertical {
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+  .sm-blue.sm-vertical a {
+    padding: 9px 23px;
+  }
+  .sm-blue.sm-vertical a .sub-arrow {
+    top: 50%;
+    margin-top: -5px;
+    bottom: auto;
+    left: auto;
+    margin-left: 0;
+    right: 10px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent #dadae7;
+  }
+  .sm-blue.sm-vertical > li:first-child > a, .sm-blue.sm-vertical > li:first-child > :not(ul) a {
+    border-radius: 0px 0px 0 0;
+  }
+  .sm-blue.sm-vertical > li:last-child > a, .sm-blue.sm-vertical > li:last-child > :not(ul) a {
+    border-radius: 0 0 0px 0px !important;
+  }
+  .sm-blue.sm-vertical > li {
+    border-left: 0 !important;
+  }
+  .sm-blue.sm-vertical ul {
+    border-radius: 0px !important;
+  }
+  .sm-blue.sm-vertical ul a {
+    padding: 10px 23px;
+  }
+}
+
 .header-top-btn-box {
   position: relative;
 }
@@ -9904,9 +9905,15 @@ a.text-dark:focus, a.text-dark:hover {
   margin-left: 20px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .ap-nav-logo-margin {
-    margin-right: 0px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ap-nav-logo-margin a {
+    width: 150px;
+    position: relative;
+    margin: auto;
   }
 }
 
@@ -9940,15 +9947,42 @@ a.text-dark:focus, a.text-dark:hover {
   }
 }
 
-.main-menu-btn {
-  top: 10px;
+@media screen and (max-width: 500px) {
+  .container-remove {
+    margin: 0 auto;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+#header-shadow {
+  width: 100%;
+  background-color: #fefefe;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  z-index: 999999;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.login-btn-block {
+  display: none !important;
+}
+
+@media screen and (max-width: 500px) {
+  .login-btn-block {
+    display: inline-block !important;
+  }
 }
 
 .main-nav {
   position: relative;
   background: #fefefe;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   height: 80px;
   z-index: 99999;
 }
@@ -10092,17 +10126,18 @@ a.text-dark:focus, a.text-dark:hover {
 
 /* Mobile menu toggle button */
 .main-menu-btn {
-  margin: 10px;
-  position: relative;
-  /* display: inline-block; */
+  position: absolute;
   float: left;
-  width: 29px;
-  height: 29px;
+  width: 48px;
+  height: 48px;
   text-indent: 29px;
   white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  top: 14px;
+  left: 16px;
+  z-index: 999;
 }
 
 /* hamburger icon */
@@ -10111,7 +10146,7 @@ a.text-dark:focus, a.text-dark:hover {
 .main-menu-btn-icon:after {
   position: absolute;
   top: 50%;
-  left: 2px;
+  left: 4px;
   height: 2px;
   width: 24px;
   background: #B9B9B9;
@@ -10122,13 +10157,13 @@ a.text-dark:focus, a.text-dark:hover {
 .main-menu-btn-icon:before {
   content: '';
   top: -7px;
-  left: 0;
+  left: 0px;
 }
 
 .main-menu-btn-icon:after {
   content: '';
   top: 7px;
-  left: 0;
+  left: 0px;
 }
 
 /* x icon */
@@ -10179,20 +10214,8 @@ a.text-dark:focus, a.text-dark:hover {
   /* always show the menu in desktop view */
   #main-menu-state:not(:checked) ~ #main-menu {
     display: block;
+    display: contents;
   }
-}
-
-/* IGNORE: Unrelated generic demo styles */
-.demo-text {
-  margin: 3em 22px;
-}
-
-.demo-text p {
-  margin-bottom: 1em;
-}
-
-.demo-text a {
-  color: #999;
 }
 
 #searchbar {
@@ -10583,6 +10606,139 @@ a.text-dark:focus, a.text-dark:hover {
   text-decoration: none;
   color: #EC965E;
   background-color: #fefefe;
+}
+
+#searchBoxOpen {
+  display: none;
+}
+
+.search-box {
+  margin: 50px 0 50px 0;
+}
+
+.searchbar-box {
+  min-width: 450px;
+  border: solid 1px #adb5bd;
+}
+
+@media screen and (max-width: 500px) {
+  .searchbar-box {
+    min-width: 160px;
+  }
+}
+
+.searchbar-box-btn {
+  min-width: 148px;
+  height: 40px;
+  color: #fefefe;
+  border-radius: 2px;
+  padding: 4px 8px;
+}
+
+@media screen and (max-width: 500px) {
+  .searchbar-box-btn {
+    min-width: 80px;
+  }
+}
+
+#notfound {
+  position: relative;
+  height: 100vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 767px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  padding: 15px;
+}
+
+.notfound .notfound-404 {
+  position: relative;
+  height: 220px;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: 'Kanit', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 186px;
+  font-weight: 200;
+  margin: 0px;
+  background: linear-gradient(130deg, #FFF291, #fee100);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+}
+
+.notfound h2 {
+  font-size: 33px;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+}
+
+.notfound p {
+  font-size: 16px;
+  font-weight: 200;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+.notfound a {
+  color: #AC4646;
+  font-weight: 200;
+  text-decoration: none;
+  border-bottom: 1px dashed #fee100;
+  border-radius: 2px;
+}
+
+.notfound-social > a {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  font-size: 14px;
+  color: #ff6f68;
+  border: 1px solid #efefef;
+  border-radius: 50%;
+  margin: 3px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.notfound-social > a:hover {
+  color: #fff;
+  background-color: #ff6f68;
+  border-color: #ff6f68;
+}
+
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 {
+    position: relative;
+    height: 168px;
+  }
+  .notfound .notfound-404 h1 {
+    font-size: 142px;
+  }
+  .notfound h2 {
+    font-size: 22px;
+  }
 }
 
 .test {

@@ -1,12 +1,12 @@
 //boostrap
 @import "../scss/plugin/boostrap";
+//Assuie Premier Style
+@import "../scss/apStyle/apFonts.scss";
+@import "../scss/apStyle/apColor";
 //plugin
 @import "./plugin/pureCookie";
 @import "../scss/plugin/smartMenu";
 //@import "../scss/plugin/slick";
-//Assuie Premier Style
-@import "../scss/apStyle/apFonts.scss";
-@import "../scss/apStyle/apColor";
 //header
 @import "../scss/Element/header";
 @import "../scss/Element/searchBar";
@@ -16,6 +16,8 @@
 @import "../scss/Element/breadcrumb";
 @import "../scss/Element/btn";
 //Assuie Premier Style
+//error
+@import "../scss/error/error";
 .test{
   height: 400px;
 }

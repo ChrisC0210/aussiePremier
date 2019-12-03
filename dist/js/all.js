@@ -1,3 +1,28 @@
+//header
+window.onscroll = function() {headerFixed()};
+      
+var header = document.getElementById("header-shadow");
+//var searchToggle = document.getElementById("searchToggle");
+var sticky = header.offsetTop;
+
+function headerFixed() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+    //searchToggle.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+    //searchToggle.classList.remove("sticky");
+  }
+}
+//searchToggle 
+function searchToggle() {
+  var searchBoxOpen = document.getElementById('searchBoxOpen');
+  if (searchBoxOpen.style.display === "none") {
+    searchBoxOpen.style.display = "block";
+  } else {
+    searchBoxOpen.style.display = "none";
+  }
+}
 //jq start
 $(document).ready(function () {
   //jQuery Zoom
