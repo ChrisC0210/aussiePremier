@@ -5,6 +5,7 @@
   object-fit: cover;
 }
 .banner-box{
+  position: relative;
   margin-bottom: 20px;
   img{
     height: 220px;
@@ -18,15 +19,15 @@
 }
 .banner-text{
   position: absolute; 
-  top: 190px;
+  top: 50px;
   @media screen and (max-width: 1024px) {
-    top: 120px;
+    top: 50px;
   }
   @media screen and (max-width: 800px) {
-    top: 150px;
+    top: 100px;
   }
   @media screen and (max-width: 500px) {
-    top: 120px;
+    top: 30px;
   }
 }
 .product-all-box{

@@ -10373,6 +10373,7 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .banner-box {
+  position: relative;
   margin-bottom: 20px;
 }
 
@@ -10394,24 +10395,24 @@ a.text-dark:focus, a.text-dark:hover {
 
 .banner-text {
   position: absolute;
-  top: 190px;
+  top: 50px;
 }
 
 @media screen and (max-width: 1024px) {
   .banner-text {
-    top: 120px;
+    top: 50px;
   }
 }
 
 @media screen and (max-width: 800px) {
   .banner-text {
-    top: 150px;
+    top: 100px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .banner-text {
-    top: 120px;
+    top: 30px;
   }
 }
 

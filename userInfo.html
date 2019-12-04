@@ -62,7 +62,14 @@
           </li>
           <li class="li-padding"><a href="./policy-content.html">POLICY</a></li>
           <li class="li-padding"><a href="./contact-us.html" class="ap-nav-margin">CONTACT US</a></li>
-          <li class="login-btn-block"><a href="./login.html" class="ap-nav-margin">Log in</a></li>
+          <li class="login-btn-block"><a href="#" class="ap-nav-margin">Log in</a>
+            <ul>
+                <li><a href="./userInfo.html">My Profile</a></li>
+                <li><a href="./order-history.html">Order History</a></li>
+                <li><a href="./login.html">Log out</a></li>
+                </li>
+              </ul>          
+          </li>
           <!-- <li><a href="#">
             <img src="./assets/icon/icon-Search.svg" alt="icon-search">
           </a>
@@ -82,9 +89,14 @@
               <img src="./assets/icon/icon-Search.svg" alt="icon-search">
             </div>
           </li>
-          <li class="menu-right-login"><a href="./login.html">
-              <img src="./assets/icon/Icon-Login.svg" alt="icon-login">
+          <li class="menu-right-login" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href="#">
+              <img src="./assets/icon/Icon-Login.svg" alt="icon-login">   
             </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="top:10px;">
+                <a class="dropdown-item" href="./userInfo.html">My Profile</a>
+                <a class="dropdown-item" href="./order-history.html">Order History</a>
+                <a class="dropdown-item" href="./login.html">Log out</a>
+              </div>
           </li>
           <li><a href="#">
               <img src="./assets/icon/Icon-Cart.svg" alt="Icon-Cart">
@@ -96,7 +108,7 @@
   </header>
   <!-- search box -->
   <div class="container" id="searchBoxOpen">
-    <div class="d-flex justify-content-center search-box">
+    <div class="d-flex justify-content-center search-box"  style="position: relative;">
       <form action="/action_page.php" class="col-lg-10 col-sm-12 d-flex justify-content-center input-group">
         <input class="searchbar-box" type="text" placeholder=" " name="search">
         <button class="searchbar-box-btn ap-primary-btn text-r-1-4-1" type="button">SEARCH</button>
@@ -248,6 +260,6 @@
   <script src="./dist/js/bootstrap.min.js"></script>
   <script src="./dist/js/purecookie.js"></script>
   <script src="./dist/js/jquery.smartmenus.js"></script>
-  <!-- <script src="./dist/js/all.js"></script> -->
+  <script src="./dist/js/all.js"></script>
 
 </html>
