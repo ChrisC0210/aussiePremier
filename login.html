@@ -110,48 +110,53 @@
     <div class="d-flex justify-content-center">
       <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item login-btn text-r-3-4-3">
-          <a class="nav-link active" id="pills-signIn-tab" data-toggle="pill" href="#pills-signIn" role="tab"
-            aria-controls="pills-signIn" aria-selected="true">New Client</a>
+          <a class="nav-link active" id="pills-register-tab" data-toggle="pill" href="#pills-register" role="tab"
+            aria-controls="pills-register" aria-selected="false">New Client</a>
         </li>
         <li class="nav-item login-btn text-r-3-4-3">
-          <a class="nav-link" id="pills-register-tab" data-toggle="pill" href="#pills-register" role="tab"
-            aria-controls="pills-register" aria-selected="false">Return Client</a>
+          <a class="nav-link" id="pills-signIn-tab" data-toggle="pill" href="#pills-signIn" role="tab"
+            aria-controls="pills-signIn" aria-selected="true">Return Client</a>
         </li>
       </ul>
     </div>
     <div class="d-flex justify-content-center">
       <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-signIn" role="tabpanel" aria-labelledby="pills-signIn-tab">
-          <form class="form-border gray-600 text-r-1-3-1">
+        <!-- Register start -->
+        <div class="tab-pane fade show active" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
+          <form name="form_register" action="process_registration.php" method="post" onsubmit="return validate_registration()" class="needs-validation form-border gray-600 text-r-1-3-1">
             <div class="form-group">
-              <label for="InputEmailSign">Email address</label>
-              <input type="email" class="form-control" id="InputEmailSign" aria-describedby="emailHelp" placeholder=" ">
+              <label for="form-control">Email address *</label>
+              <input maxlength="80" name="member_email" type="email" class="form-control" id="form-control"
+                aria-describedby="emailHelp" placeholder=" " required>
+                <div class="invalid-feedback">
+                    Please enter a message in the textarea.
+                  </div>
             </div>
             <div class="form-group">
-              <label for="InputPasswordSign">Password</label>
-              <input type="password" class="form-control" id="InputPasswordSign" placeholder=" ">
+              <label for="member_password">Password *</label>
+              <input maxlength="25" name="member_password" type="password" class="form-control" id="member_password" placeholder=" " required>
             </div>
             <div class="form-group">
-              <label for="InputConfirmPassword">Confirm Password</label>
-              <input type="password" class="form-control" id="InputConfirmPassword" placeholder=" ">
+              <label for="member_re_password">Confirm Password *</label>
+              <input maxlength="25" name="member_re_password" type="password" class="form-control" id="member_re_password" placeholder=" " required>
             </div>
             <div>Title</div>
             <div class="form-group d-flex">
               <div class="form-check mr-4">
-                <input class="form-check-input" type="radio" name="TitleRadios" id="TitleRadios1" value="option1"
-                  checked>
-                <label class="form-check-label" for="TitleRadios1">
+                <input class="form-check-input" type="radio" name="member_title" value="Mr." id="member_title"
+                  checked="checked">
+                <label class="form-check-label" for="member_title">
                   Mr.
                 </label>
               </div>
               <div class="form-check mr-4">
-                <input class="form-check-input" type="radio" name="TitleRadios" id="TitleRadios2" value="option2">
+                <input class="form-check-input" type="radio" name="member_title" id="member_title" value="Mrs.">
                 <label class="form-check-label" for="TitleRadios2">
                   Mrs.
                 </label>
               </div>
               <div class="form-check mr-4">
-                <input class="form-check-input" type="radio" name="TitleRadios" id="TitleRadios3" value="option3">
+                <input class="form-check-input" type="radio" name="member_title" id="member_title" value="Ms.">
                 <label class="form-check-label" for="TitleRadios3">
                   Miss
                 </label>
@@ -159,50 +164,142 @@
             </div>
             <div class="form-group">
               <label for="InputConfirmFirstName">First Name *</label>
-              <input type="FirstName" class="form-control" id="InputConfirmFirstName" placeholder=" ">
+              <input maxlength="25" name="member_first_name" type="FirstName" class="form-control"
+                id="InputConfirmFirstName" placeholder=" " required>
             </div>
             <div class="form-group">
               <label for="InputConfirmLastName">Last Name * </label>
-              <input type="LastName" class="form-control" id="InputConfirmLastName" placeholder=" ">
+              <input maxlength="25" name="member_last_name" type="LastName" class="form-control"
+                id="InputConfirmLastName" placeholder=" " required>
             </div>
             <div class="form-group">
-              <label for="InputConfirmMobileNumber">Mobile Number</label>
-              <input type="MobileNumber" class="form-control" id="InputConfirmMobileNumber" placeholder=" ">
+              <label for="member_mobile_number">Mobile Number</label>
+              <input maxlength="20" name="member_mobile_number" type="MobileNumber" class="form-control"
+                id="member_mobile_number" placeholder=" ">
             </div>
             <div class="form-group">
-              <label for="InputConfirmContactNumber">Contact Number * </label>
-              <input type="ContactNumber" class="form-control" id="InputConfirmContactNumber" placeholder=" ">
+              <label for="member_contact_number">Contact Number * </label>
+              <input maxlength="20" name="member_contact_number" type="ContactNumber" class="form-control"
+                id="member_contact_number" placeholder=" " required>
             </div>
             <div class="form-group">
               <label for="InputConfirmCompanyName">Company Name *</label>
-              <input type="CompanyName" class="form-control" id="InputConfirmCompanyName" placeholder=" ">
+              <input maxlength="50" name="member_company_name" type="CompanyName" class="form-control"
+                id="InputConfirmCompanyName" placeholder=" " required>
             </div>
             <div class="form-group">
               <label for="InputConfirmPosition">Position</label>
-              <input type="Position" class="form-control" id="InputConfirmPosition" placeholder=" ">
+              <input maxlength="50" name="member_position" type="Position" class="form-control"
+                id="InputConfirmPosition" placeholder=" ">
             </div>
             <div>
               <p id="emailHelp" class="form-text text-muted">By creating your account, you agree to our
-                <a href="#" class="ap-orange-600 ">Privacy Policy</a>
+                <a href="./" class="ap-orange-600 " data-toggle="modal" data-target="#PrivacyPolicy">Privacy Policy</a>
               </p>
             </div>
-            <button type="submit" class="gray-btn text-r-3-4-3">Register</button>
+            <!-- Modal Privacy Policy -->
+            <div class="modal fade" style="z-index: 999999;" id="PrivacyPolicy" tabindex="-1" role="dialog" aria-labelledby="PrivacyPolicyTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-r-2-4-2" id="PrivacyPolicyCenterTitle">Privacy Policy</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="text-r-1-3-1 gray-800">
+                      <h3 class="mb-4 text-r-4-4-4 gray-700">Policy on General Returns and Exchanges of Purchased items
+                      </h3>
+                      <h5 class="text-r-2-4-2 gray-800">A General Returns</h5>
+                      <section class="mb-4">
+                        <div class="mb-1">For full refunds, the returned items must be returned within 7 days after the
+                          purchase. The
+                          returned items must be new and unopened with our original packaging intact. The purchaser must
+                          bear all the
+                          shipping costs unless the error was made at our end and the items sent to you were incorrect
+                          or defective.
+                        </div>
+                        <div class="mb-1">Please contact us at product@aussiepremier.com and one of our Product
+                          Representatives will
+                          contact you and guide you through the return process.</div>
+                      </section>
+                      <h5 class="text-r-2-4-2 gray-800">B Exchanges</h5>
+                      <section class="mb-4">
+                        <div class="mb-1"> Policy for exchanges will be similar to the General Returns. You must ensure
+                          that the
+                          item/items to be exchanged is/are in good condition and the original packaging is intact.
+                        </div>
+                        <div class="mb-1">If you would like to exchange for another item, you must send the item back to
+                          us and once we
+                          have ensured that it is in good condition, we will then send out the replacement item to you.
+                          Please note that
+                          all shipping cost of the replacement item will be borne by the purchaser. All purchased items
+                          can only be
+                          exchanged once. Please contact us at product@aussiepremier.com for arrangement.</div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="gray-btn" data-dismiss="modal">I Agree</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal Privacy Policy -->
+            <button name="from_url" value="index.php" type="submit" class="gray-btn text-r-3-4-3">Register</button>
           </form>
         </div>
-        <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
-          <form class="form-border gray-600 text-r-1-3-1">
+        <!-- Register end -->
+        <!-- Sign in start -->
+        <div class="tab-pane fade" id="pills-signIn" role="tabpanel" aria-labelledby="pills-signIn-tab">
+          <form class="form-border gray-600 text-r-1-3-1" name="form_login" action="process_login.php" method="post">
             <div class="form-group">
-              <label for="InputEmail1">Email address</label>
-              <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder=" ">
+              <label for="txt_email">Email address *</label>
+              <input name="txt_email" id="txt_email" type="email" class="form-control" id="txt_email"
+                aria-describedby="emailHelp" placeholder=" " required>
             </div>
             <div class="form-group">
-              <label for="InputPassword1">Password</label>
-              <input type="password" class="form-control" id="InputPassword1" placeholder=" ">
+              <label for="txt_password">Password *</label>
+              <input name="txt_password" type="password" class="form-control" id="txt_password" placeholder=" " required>
             </div>
-            <div class="form-group text-r-1-4-1"><a href="#" class="gray-800">Forgot Your Passwords?</a></div>
-            <button type="submit" class="gray-btn text-r-3-4-3">Sign in</button>
+            <div class="form-group text-r-1-4-1">
+              <a href="#" class="gray-800" data-toggle="modal" data-target="#forgotPW">Forgot Your Passwords?</a>
+            </div>
+            <!-- Modal forgot PW -->
+            <div class="modal" style="z-index: 999999;" id="forgotPW" tabindex="-1" role="dialog" aria-labelledby="forgotPWTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-r-2-4-2" id="forgotPWCenterTitle">Reset Your Password</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="text-r-1-3-1 gray-800 mb-4">
+                        <h5 class="text-r-2-4-2 gray-800">Enter your email here and we will send you a password reset
+                          link.</h5>
+                      </div>
+                      <fieldset>
+                      <div class="form-group">
+                        <label for="txt_email">Email address</label>
+                        <input name="txt_email" id="txt_email" type="email" class="form-control" id="txt_email"
+                          aria-describedby="emailHelp" placeholder=" ">
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <input type="submit" id="SendPassword" class="gray-btn col-10 mt-2 mb-2"  value="Send password reset email">
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- Modal forgot PW -->
+            <button name="from_url" value="index.php" type="submit" class="gray-btn text-r-3-4-3">Sign in</button>
           </form>
         </div>
+        <!-- Sign in end -->
       </div>
     </div>
   </div>

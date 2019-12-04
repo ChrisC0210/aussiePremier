@@ -23,6 +23,36 @@ function searchToggle() {
     searchBoxOpen.style.display = "none";
   }
 }
+//error
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+// Upon load..
+window.addEventListener('load', () => {
+  // Grab all the forms
+  var forms = document.getElementsByClassName('needs-validation');
+  
+  // Iterate over each one
+  for (let form of forms) {
+  
+    // Add a 'submit' event listener on each one
+    form.addEventListener('submit', (evt) => {
+    
+      // check if the form input elements have the 'required' attribute  
+      if (!form.checkValidity()) {
+        evt.preventDefault();
+        evt.stopPropagation();
+        console.log('Bootstrap will handle incomplete form fields');
+      } else {
+        // Since form is now valid, prevent default behavior..
+        evt.preventDefault();
+        console.info('All form fields are now valid...');
+      }
+      
+      form.classList.add('was-validated');
+      
+    });
+    
+  }
+});
 //jq start
 $(document).ready(function () {
   //jQuery Zoom
@@ -59,5 +89,29 @@ $(document).ready(function () {
       });
     }
   });
+  //modal show
+  // $(function (){
+  //   if ($('.modal')) {
+  //     //$('.main-nav').hide();
+  //     $('.main-nav').addClass('navNone');
+  //   } else {
+  //     //$('.main-nav').show();
+  //     $('.main-nav').removeClass('navNone');
+  //   }
+  //   });
+  //
+  // $(function () {
+  //   if ($('#forgotPW').hasClass('show').modal('toggle')) {
+  //     $('.main-nav').addClass('navNone');
+  //   } else {
+  //     //$('.main-nav').show();
+  //     $('.main-nav').removeClass('navNone');
+  //   }    
+  // });
+  //
+  //error msg
+  $('#needs-validation').validate()
   //jq end
+
 });
+//
