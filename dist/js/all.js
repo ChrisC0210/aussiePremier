@@ -110,7 +110,7 @@ $(document).ready(function () {
   // });
   //
   //error msg
-  $('#needs-validation').validate()
+  //$('#needs-validation').validate()
   //jq end
 
 });
