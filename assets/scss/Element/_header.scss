@@ -624,6 +624,10 @@ $menu-animation-timing:   ease-out;
   }
   a{
     color: $gray-700;
+    &:hover, &:active{
+      background-color: $gray-200;
+      color: $gray-700;
+    }
   }
 }
 .login-triangle{

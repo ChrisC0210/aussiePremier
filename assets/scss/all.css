@@ -10236,6 +10236,11 @@ a.text-dark:focus, a.text-dark:hover {
   color: #707070;
 }
 
+.login-all-box a:hover, .login-all-box a:active {
+  background-color: #F5F5F5;
+  color: #707070;
+}
+
 .login-triangle {
   position: absolute;
   top: -14px;
