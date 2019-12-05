@@ -10218,6 +10218,47 @@ a.text-dark:focus, a.text-dark:hover {
   }
 }
 
+.login-all-box {
+  top: 50px !important;
+  min-width: 6rem !important;
+  max-width: 8rem !important;
+  background-color: #fefefe;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.login-all-box .dropdown-item {
+  padding: .2rem 1rem !important;
+}
+
+.login-all-box a {
+  color: #707070;
+}
+
+.login-triangle {
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 14px solid #cccccc;
+}
+
+.login-triangle:after {
+  content: " ";
+  position: relative;
+  top: -18px;
+  right: 9px;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 12px solid #fefefe;
+}
+
 #searchbar {
   position: relative;
 }
