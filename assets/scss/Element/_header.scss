@@ -340,7 +340,7 @@ $menu-animation-timing:   ease-out;
 .login-btn-block{
   display: none !important;
   @media screen and (max-width: 500px) {
-    display: inline-block !important;
+    display: block !important;
   }
 }
 //

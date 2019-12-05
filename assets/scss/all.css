@@ -9976,7 +9976,7 @@ a.text-dark:focus, a.text-dark:hover {
 
 @media screen and (max-width: 500px) {
   .login-btn-block {
-    display: inline-block !important;
+    display: block !important;
   }
 }
 
