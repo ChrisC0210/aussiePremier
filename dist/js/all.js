@@ -111,7 +111,23 @@ $(document).ready(function () {
   //
   //error msg
   //$('#needs-validation').validate()
-  //jq end
+  //
+  //qty = chainSelect('select#qty', '#changeOptiont');
+  //Select Quantity > add to cart > change header cart number
+  $("select#qty").change(function() {
+    var selectedQty = $(this)
+      .children("option:selected")
+      .val();
+    //alert("You have selected the qty - " + selectedQty);
+    $("a.add-to-cart").click(function(event) {
+      setTimeout(function() {
+        $("a.cart > span").addClass("counter");
+        $("a.cart > span.counter").text(selectedQty);
+      }, 400);
+      event.preventDefault();
+    });
+  });
 
+//jq end
 });
 //

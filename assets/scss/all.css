@@ -10688,6 +10688,26 @@ a.text-dark:focus, a.text-dark:hover {
   }
 }
 
+.cart {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  padding: 0px 8px 0px 8px;
+  border-radius: 50px;
+  background-color: #fee100;
+  text-align: center;
+}
+
+.cart span {
+  color: #414141;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.add-to-cart {
+  text-align: center;
+}
+
 #notfound {
   position: relative;
   height: 100vh;
