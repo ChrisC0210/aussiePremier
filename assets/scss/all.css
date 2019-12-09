@@ -10462,16 +10462,31 @@ a.text-dark:focus, a.text-dark:hover {
   }
 }
 
+.alsoLike-box {
+  background-color: #F5F5F5;
+  padding: 2rem 0 2rem 0;
+}
+
 .product-all-box {
-  width: 1000px;
   height: 100%;
   margin-bottom: 40px;
   margin: 0 auto;
+  overflow: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .product-all {
   margin-bottom: 40px;
-  max-width: 900px;
+  max-width: 600px;
+  padding-right: 20px;
+  height: 100%;
+}
+
+.product-all p {
+  margin-bottom: 10px;
+  margin-top: -10px;
 }
 
 .product-box-img {
@@ -10565,6 +10580,7 @@ a.text-dark:focus, a.text-dark:hover {
   padding: 10px 0 10px 0;
   border-radius: 2px;
   background-color: #707070;
+  max-height: 48px;
 }
 
 .ap-primary-btn:hover, .ap-primary-btn:active {
@@ -10832,5 +10848,9 @@ a.text-dark:focus, a.text-dark:hover {
   left: 0;
   z-index: 1040;
   background-color: #000;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 /*# sourceMappingURL=all.css.map */
