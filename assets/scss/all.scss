@@ -6,6 +6,7 @@
 //plugin
 @import "./plugin/pureCookie";
 @import "../scss/plugin/smartMenu";
+@import "../scss/plugin/jquerySteps.scss";
 //@import "../scss/plugin/slick";
 //header
 @import "../scss/Element/header";
@@ -47,3 +48,4 @@
 ::-webkit-scrollbar {
   display: none;
 }
+//@at-root

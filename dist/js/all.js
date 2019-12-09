@@ -246,7 +246,14 @@ $(document).ready(function () {
       event.preventDefault();
     });
   });
+//add jq step
+// Initialize wizard
+$("#example-basic").steps({
+  headerTag: "h3",
+  bodyTag: "section",
+  transitionEffect: "slideLeft",
+  autoFocus: true
+});
 
 //jq end
 });
-//

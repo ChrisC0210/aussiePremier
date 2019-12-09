@@ -10701,10 +10701,21 @@ a.text-dark:focus, a.text-dark:hover {
   padding: 4px 8px;
 }
 
+.cart-btn {
+  padding: 10px 20px 10px 20px;
+  border-radius: 2px;
+  color: #fefefe;
+}
+
 @media screen and (max-width: 500px) {
-  .searchbar-box-btn {
-    min-width: 80px;
+  .cart-btn {
+    padding: 10px 50px 10px 50px;
   }
+}
+
+.cart-btn:hover, .cart-btn:active {
+  text-decoration: none;
+  color: #fefefe;
 }
 
 .cart {

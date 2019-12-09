@@ -12,7 +12,7 @@
 
 <body>
   <!-- header start -->
-  <div class="header-top">
+  <!-- <div class="header-top">
     <div class="container header-top-btn-box">
       <div class="d-flex header-top-btn text-r-1-4-1" style="float: right; margin-right: 8px;">
         <form class="form-inline">
@@ -33,7 +33,7 @@
         </form>
       </div>
     </div>
-  </div>
+  </div> -->
   <header Id='header-shadow'>
     <div class="main-nav container container-remove">
       <nav class=" container" role="navigation">
@@ -67,22 +67,22 @@
               <li><a href="./userInfo.html">My Profile</a></li>
               <li><a href="./order-history.html">Order History</a></li>
               <li><a href="./login.html">Log out</a></li>
-              </li>
-            </ul>
           </li>
-          <div class="ap-nav-margin"></div>
-          <!-- <li><a href="#">
-            <img src="./assets/icon/icon-Search.svg" alt="icon-search">
-          </a>
+        </ul>
         </li>
-        <li class="menu-right-login"><a href="./login.html">
-            <img src="./assets/icon/Icon-Login.svg" alt="icon-login">
-          </a>
-        </li>
-        <li><a href="#">
-            <img src="./assets/icon/Icon-Cart.svg" alt="Icon-Cart">
-          </a>
-        </li> -->
+        <div class="ap-nav-margin"></div>
+        <!-- <li><a href="#">
+              <img src="./assets/icon/icon-Search.svg" alt="icon-search">
+            </a>
+          </li>
+          <li class="menu-right-login"><a href="./login.html">
+              <img src="./assets/icon/Icon-Login.svg" alt="icon-login">
+            </a>
+          </li>
+          <li><a href="#">
+              <img src="./assets/icon/Icon-Cart.svg" alt="Icon-Cart">
+            </a>
+          </li> -->
         </ul>
         <span class="menu-right" style="top: 10px;">
           <li>
@@ -91,18 +91,20 @@
             </div>
           </li>
           <li class="menu-right-login dropdown">
-            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img src="./assets/icon/Icon-Login.svg" alt="icon-login">   
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <img src="./assets/icon/Icon-Login.svg" alt="icon-login">
             </a>
             <div class="dropdown-menu login-all-box" aria-labelledby="dropdownMenuLink">
-                <span class="login-triangle"></span>
-                <a class="dropdown-item" href="./userInfo.html">My Profile</a>
-                <a class="dropdown-item" href="./order-history.html">Order History</a>
-                <a class="dropdown-item" href="./login.html">Log out</a>
-              </div>
+              <span class="login-triangle"></span>
+              <a class="dropdown-item" href="./userInfo.html">My Profile</a>
+              <a class="dropdown-item" href="./order-history.html">Order History</a>
+              <a class="dropdown-item" href="./login.html">Log out</a>
+            </div>
           </li>
           <li><a href="#">
               <img src="./assets/icon/Icon-Cart.svg" alt="Icon-Cart">
+              <a class="cart"><span>0</span></a>
             </a>
           </li>
         </span>
@@ -111,7 +113,7 @@
   </header>
   <!-- search box -->
   <div class="container" id="searchBoxOpen">
-    <div class="d-flex justify-content-center search-box"  style="position: relative;">
+    <div class="d-flex justify-content-center search-box" style="position: relative;">
       <form action="/action_page.php" class="col-lg-10 col-sm-12 d-flex justify-content-center input-group">
         <input class="searchbar-box" type="text" placeholder=" " name="search">
         <button class="searchbar-box-btn ap-primary-btn text-r-1-4-1" type="button">SEARCH</button>
@@ -120,96 +122,88 @@
   </div>
   <!-- search box -->
   <!-- header end -->
-  <!-- banner start -->
-  <div class="banner-box">
-    <div class="container text-y-7-4-7 gray-700">
-      <span class="banner-text">Order info</span>
-    </div>
-    <img src="./assets/img/banner/bg-ap-brown-100.png" alt="banner-img" style="width: 100%;">
-  </div>
-  <!-- banner end -->
   <!-- content start -->
-  <div class="container">
-    <!-- breadcrumb start -->
-    <nav aria-label="breadcrumb" class="col-12 text-r-1-3-1">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item"><a href="/order-history.html">Order History</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Order info</li>
-      </ol>
-    </nav>
-    <!-- breadcrumb end -->
-      <!-- content start -->
-      <div class="d-flex justify-content-center">
-        <div class="col-11 text-r-1-3-1 gray-800">
-          <h3 class="mb-4 text-r-4-4-4 gray-700">All Orders</h3>
-          <h5 class="text-r-2-4-2 gray-800">Delivery</h5>
-          <section class="mb-4">
-            <div class="mb-1">Mr. Justin Chan</div>
-            <div class="mb-1">+852 3422 8674</div>
-            <div class="mb-1">Room 44, Unit 908-915, SmartSpace 3F, Core F, Cyberport 3 ,100 Cyberport</div>
+  <div class="container mt-4 mb-4">
+    <!-- cart form start -->
+    <form action="" class="d-flex justify-content-center">
+        <!-- 1 Check Out start -->
+      <div class="col-12 text-r-1-3-1 gray-800">
+        <h3 class="mb-4 text-r-4-4-4 gray-700">Check Out</h3>
+        <h5 class="mb-4 text-r-3-4-3 gray-900">Products</h5>
+        <!-- product start -->
+        <div class="mb-4">
+          <!-- card start -->
+          <section class="row d-flex justify-content-between">
+            <div class="col-lg-2 col-md-2 col-sm-2">
+              <img src="./assets/img/product/1.2.2-Orange.png" alt="product img"
+                class="d-flex justify-content-center product-img">
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12">
+              <p class="text-r-1-4-1">Kangaroo Island Eucalyptus</p>
+              <p>EUCALYPTUS HAND & NAIL </p>
+              <p>CRÈME 50ML</p>
+              <div class="d-flex justify-content-between">
+                <p>Quantity: 1</p>
+                <p>$120</p>
+              </div>
+            </div>
           </section>
-          <h5 class="mb-4 text-r-3-4-3 gray-900">Payment Method : Paypal</h5>
-          <h5 class="mb-4 text-r-3-4-3 gray-900">Products</h5>
-          <!-- product start -->
-          <div class="mb-4">
-            <!-- card start -->
-            <section class="row d-flex justify-content-between">
-              <div class="col-lg-2 col-md-2 col-sm-2">
-                <img src="./assets/img/product/1.2.2-Orange.png" alt="product img"
-                  class="d-flex justify-content-center product-img">
-              </div>
-              <div class="col-lg-8 col-md-8 col-sm-12">
-                <p class="text-r-1-4-1">Kangaroo Island Eucalyptus</p>
-                <p>EUCALYPTUS HAND & NAIL </p>
-                <p>CRÈME 50ML</p>
-                <div class="d-flex justify-content-between">
-                  <p>Quantity: 1</p>
-                  <p>$120</p>
-                </div>
-              </div>
-            </section>
-            <!-- card end -->
-            <div>
-              <hr size="8px" align="center" width="100%">
-            </div>
-            <!-- card start -->
-            <section class="row d-flex justify-content-between">
-              <div class="col-lg-2 col-md-2 col-sm-2">
-                <img src="./assets/img/product/1.2.2-Orange.png" alt="product img"
-                  class="d-flex justify-content-center product-img">
-              </div>
-              <div class="col-lg-8 col-md-8 col-sm-12">
-                <p class="text-r-1-4-1">Kangaroo Island Eucalyptus</p>
-                <p>EUCALYPTUS HAND & NAIL </p>
-                <p>CRÈME 50ML</p>
-                <div class="d-flex justify-content-between">
-                  <p>Quantity: 1</p>
-                  <p>$120</p>
-                </div>
-              </div>
-            </section>
-            <!-- card end -->
-            <div>
-              <hr size="8px" align="center" width="100%">
-            </div>
-            <!-- price start -->
-            <div class="d-flex justify-content-between">
-              <p>Discount</p>
-              <p>0</p>
-            </div>
-            <div class="d-flex justify-content-between text-r-2-4-2">
-              <p>Total</p>
-              <p>$240</p>
-            </div>
-            <!-- price end -->
+          <!-- card end -->
+          <div>
+            <hr size="8px" align="center" width="100%">
           </div>
-          <!-- product end -->
+          <!-- card start -->
+          <section class="row d-flex justify-content-between">
+            <div class="col-lg-2 col-md-2 col-sm-2">
+              <img src="./assets/img/product/1.2.2-Orange.png" alt="product img"
+                class="d-flex justify-content-center product-img">
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12">
+              <p class="text-r-1-4-1">Kangaroo Island Eucalyptus</p>
+              <p>EUCALYPTUS HAND & NAIL </p>
+              <p>CRÈME 50ML</p>
+              <div class="d-flex justify-content-between">
+                <p>Quantity: 1</p>
+                <p>$120</p>
+              </div>
+            </div>
+          </section>
+          <!-- card end -->
+          <div>
+            <hr size="8px" align="center" width="100%">
+          </div>
+          <!-- price start -->
+          <div class="d-flex justify-content-between">
+            <p>Discount</p>
+            <p>0</p>
+          </div>
+          <div class="d-flex justify-content-between text-r-2-4-2">
+            <p>Total</p>
+            <p>$240</p>
+          </div>
+          <!-- price end -->
+        </div>
+        <!-- product end -->
+        <!-- payment start -->
+        <div class="form-group mb-4 text-r-3-4-3 gray-900 form-inline">
+            <label name="member_region_id" for="member_region_id" class="mr-2">Payment Method : </label>
+            <select class="form-control" id="member_region_id">
+              <option value="0" selected="">Select Payment Method</option>
+              <option>Paypal</option>
+            </select>
+          </div>
+        <!-- payment end -->
+        <div class="d-flex justify-content-end">
+            <div class=" ">
+                <a href="#" class="cart-btn gray-btn text-r-3-4-3">NEXT</a>
+              </div>
         </div>
       </div>
-      <!-- content end -->
-    </div>
-    <!-- content end -->
+        <!-- 1 Check Out end -->
+    </form>
+    <!-- cart form end -->
+  </div>
+  <!-- content end -->
   <!-- footer start -->
   <div class="text-center footer-box text-r-1-3-1">
     <p> ©2019 Aussie Premier. All rights reserved. </p>
@@ -218,8 +212,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./dist/js/popper.min.js"></script>
   <script src="./dist/js/bootstrap.min.js"></script>
-  <script src="./dist/js/purecookie.js"></script>
+  <!-- <script src="./dist/js/purecookie.js"></script> -->
   <script src="./dist/js/jquery.smartmenus.js"></script>
+  <script src="./dist/js/jquery.steps.min.js"></script>
+  <!-- <script src="./dist/js/all.min.js"></script> -->
   <script src="./dist/js/all.js"></script>
 
 </html>
