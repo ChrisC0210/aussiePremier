@@ -132,10 +132,21 @@
     </nav>
     <!-- breadcrumb end -->
     <!-- Profile start -->
-    <div class="d-flex justify-content-center">
-      <div>
-        <img class="img-user" src="./assets/img/profile.jpg" alt="user photo">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12  d-flex justify-content-center">
+        <label class="text-center image-preview-wrapper" for="file-uploader">
+          <img class="img-user" src="./assets/img/user-img.png" alt="user photo" data-target="image-preview">
+          <input type="file" class="custom-file-input" data-target="file-uploader" id="file-uploader">
+          <div class="spinner-wrapper position-absolute" data-target="spinner">
+            <div class="spinner-border text-secondary" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="col-12">
         <p class="user-name text-r-3-4-3 mt-2">{{User Name}}</p>
+      </div>
       </div>
     </div>
     <!-- Profile end -->
@@ -487,6 +498,6 @@
   <script src="./dist/js/bootstrap.min.js"></script>
   <script src="./dist/js/purecookie.js"></script>
   <script src="./dist/js/jquery.smartmenus.js"></script>
-  <script src="./dist/js/all.js"></script>
+  <script src="./dist/js/all.min.js"></script>
 
 </html>

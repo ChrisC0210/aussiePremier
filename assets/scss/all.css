@@ -10390,6 +10390,9 @@ a.text-dark:focus, a.text-dark:hover {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 2px 2px #D6D6D6;
+          box-shadow: 0px 2px 2px #D6D6D6;
 }
 
 .user-name {
