@@ -74,3 +74,17 @@
   //border:solid 1px rgb(107, 100, 214);
   margin-bottom: 20px;
 }
+.cart-border{
+  border: solid 2px #E6E6E6;
+  border-radius: 2px;
+  //padding: 10px 10px 10px 10px;
+  // max-width: 374px;
+  // min-width: 374px;
+  @media screen and (max-width: 500px) {
+    border: solid 2px $white;
+  }
+  @media screen and (max-width: 400px) {
+    border: solid 2px $white;
+    //min-width: 340px;
+  }
+}

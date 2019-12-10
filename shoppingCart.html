@@ -9,6 +9,24 @@
   <link rel="shortcut icon" type="image/x-icon" href="./assets/img/ap-favicon.ico">
   <link rel="stylesheet" href="./dist/style/all.min.css">
 </head>
+<style>
+.hide {
+  display: none;
+}
+
+
+.price:before,
+.subtotal:before,
+.subtotal-value:before,
+.total-value:before,
+.promo-value:before {
+  content: '$';
+}
+li.price:before,
+li.subtotal:before {
+  content: '';
+}
+</style>
 <body>
   <!-- header start -->
   <!-- <div class="header-top">
@@ -126,14 +144,14 @@
     <!-- cart form start -->
     <form action="" class="d-flex justify-content-center">
       <!-- 1 Check Out start -->
-      <div class="col-12 text-r-1-3-1 gray-800">
+      <div class="col-12 text-r-1-3-1 gray-800 m-2 p-4 order-card">
         <h3 class="mb-4 text-r-4-4-4 gray-700">Check Out</h3>
         <h5 class="mb-4 text-r-3-4-3 gray-900">Products</h5>
         <!-- product start -->
         <div class="mb-4">
           <!-- card start -->
           <section class="row d-flex justify-content-between basket-product">
-            <div class="col-lg-2 col-md-2 col-sm-2">
+            <div class="item col-lg-2 col-md-2 col-sm-2">
               <img src="./assets/img/product/1.2.2-Orange.png" alt="product img"
                 class="d-flex justify-content-center product-img">
             </div>
@@ -150,11 +168,11 @@
               </div>
               <div class="d-flex justify-content-between">
                 <div class="quantity">
-                  <input id="qty" type="number" value="1" min="1" class="quantity-field">
+                  <input type="number" value="1" min="1" class="quantity-field">
                 </div>
-                <!-- <p>Quantity: <span>+</span><span id="qty">1</span> <span>-</span></p> -->
-                <p class="price">$120</p>
-                <p class="subtotal">$120</p>
+                <!-- <p>Quantity: <span>+</span><span>1</span> <span>-</span></p> -->
+                <div class="price">120.00</div>
+                <div class="subtotal">120.00</div>
               </div>
             </div>
           </section>
@@ -164,47 +182,49 @@
           </div>
           <!-- card start -->
           <section class="row d-flex justify-content-between basket-product">
-            <div class="col-lg-2 col-md-2 col-sm-2">
-              <img src="./assets/img/product/1.2.2-Orange.png" alt="product img"
-                class="d-flex justify-content-center product-img">
-            </div>
-            <div class="col-lg-8 col-md-8 col-sm-12">
-              <div class="d-flex justify-content-between">
-                <div class="product-details">
-                  <p class="text-r-1-4-1">Kangaroo Island Eucalyptus</p>
-                  <p>EUCALYPTUS HAND & NAIL </p>
-                  <p>CRÈME 50ML</p>
+              <div class="item col-lg-2 col-md-2 col-sm-2">
+                <img src="./assets/img/product/1.2.2-Orange.png" alt="product img"
+                  class="d-flex justify-content-center product-img">
+              </div>
+              <div class="col-lg-8 col-md-8 col-sm-12">
+                <div class="d-flex justify-content-between">
+                  <div class="product-details">
+                    <p class="text-r-1-4-1">Kangaroo Island Eucalyptus</p>
+                    <p>EUCALYPTUS HAND & NAIL </p>
+                    <p>CRÈME 50ML</p>
+                  </div>
+                  <div class="remove">
+                    <button>Remove</button>
+                  </div>
                 </div>
-                <div class="remove">
-                  <button>Remove</button>
+                <div class="d-flex justify-content-between">
+                  <div class="quantity">
+                    <input type="number" value="1" min="1" class="quantity-field">
+                  </div>
+                  <!-- <p>Quantity: <span>+</span><span id="qty">1</span> <span>-</span></p> -->
+                  <div class="price">120.00</div>
+                  <div class="subtotal">120.00</div>
                 </div>
               </div>
-              <div class="d-flex justify-content-between">
-                <div class="quantity">
-                  <input id="qty" type="number" value="1" min="1" class="quantity-field">
-                </div>
-                <!-- <p>Quantity: <span>+</span><span id="qty">1</span> <span>-</span></p> -->
-                <p class="price">$120</p>
-                <p class="subtotal">$120</p>
-              </div>
-            </div>
-          </section>
-          <!-- card end -->
+            </section>
+            <!-- card end -->
           <div>
             <hr size="8px" align="center" width="100%">
           </div>
           <!-- price start -->
-          <div class="d-flex justify-content-between">
-            <p>Discount</p>
-            <p>0</p>
-          </div>
-          <div class="d-flex justify-content-between mb-4 summary-subtotal">
-              <div class="subtotal-title">Subtotal</div>
-              <div class="subtotal-value final-value" id="basket-subtotal" >240</div>
-            </div>
-          <div class="d-flex justify-content-between text-r-2-4-2 summary-total">
-            <p class="total-title">Total</p>
-            <p class="total-value final-value" id="basket-total">$240</p>
+          <div class="summary">
+              <div class="d-flex justify-content-between summary-promo hide">
+                  <div class="promo-title">Discount</div>
+                  <div class="promo-value final-value" id="basket-promo">0</div>
+                </div>
+                <div class="d-flex justify-content-between mb-4 summary-subtotal">
+                    <div class="subtotal-title">Subtotal</div>
+                    <div class="subtotal-value final-value" id="basket-subtotal" >240.00</div>
+                  </div>
+                <div class="d-flex justify-content-between text-r-2-4-2 summary-total">
+                  <div class="total-title">Total</div>
+                  <div class="total-value final-value" id="basket-total">240.00</div>
+                </div>
           </div>
           <!-- price end -->
         </div>
@@ -219,8 +239,8 @@
         </div>
         <!-- payment end -->
         <div class="d-flex justify-content-end">
-          <div class=" ">
-            <a href="#" class="cart-btn gray-btn text-r-3-4-3">NEXT</a>
+          <div class="summary-checkout">
+            <a href="#" class="checkout-cta cart-btn gray-btn text-r-3-4-3">NEXT</a>
           </div>
         </div>
       </div>
@@ -300,10 +320,10 @@
         //If there is a valid promoCode, and subtotal < 10 subtract from total
         var promoPrice = parseFloat($('.promo-value').text());
         if (promoPrice) {
-          if (subtotal >= 10) {
+          if (subtotal >= 120) {
             total -= promoPrice;
           } else {
-            alert('Order must be more than £10 for Promo code to apply.');
+            alert('Order must be more than $120 for Promo code to apply.');
             $('.summary-promo').addClass('hide');
           }
         }
