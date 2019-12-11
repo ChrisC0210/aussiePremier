@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assuie Premier</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/img/ap-favicon.ico">
+  <link rel="stylesheet" href="./dist/style/all.min.css">
+</head>
+
+<body>
+  <!-- header start -->
+  <header Id='header-shadow'>
+    <div class="main-nav container container-remove">
+      <nav class=" container" role="navigation">
+        <!-- Mobile menu toggle button (hamburger/x icon) -->
+        <input id="main-menu-state" type="checkbox" />
+        <label class="main-menu-btn" for="main-menu-state">
+          <span class="main-menu-btn-icon"></span>
+        </label>
+        <h2 class="nav-brand ap-nav-logo-margin">
+          <a href="./">
+            <img class="" style="width: 100px;" src="./assets/img/ap-logo.svg" alt="logo">
+          </a>
+        </h2>
+        <!-- Sample menu definition -->
+        <ul id="main-menu" class="sm sm-blue text-r-1-4-1">
+          <li class="li-padding"><a href="#">COLLECTIONS</a>
+            <ul>
+              <li><a href="./collections.html">Kangaroo Island Eucalyptus</a></li>
+              <li><a href="./riverlandOrange.html">Riverland Orange</a></li>
+              <li><a href="./organicLigurianHoney.html">Organic Ligurian Honey</a></li>
+              <li><a href="./mtMacedonRose.html">Mt Macedon Rose</a>
+              <li><a href="./tasmanianLavender.html">Tasmanian Lavender</a>
+              <li><a href="./lordHoweIsland.html">Lord Howe Island</a>
+              </li>
+            </ul>
+          </li>
+          <li class="li-padding"><a href="./policy-content.html">POLICY</a></li>
+          <li class="li-padding"><a href="./contact-us.html">CONTACT US</a></li>
+          <li class="li-padding login-btn-block"><a href="#">ＭEMBERSHIP</a>
+            <ul>
+              <li><a href="./userInfo.html">My Profile</a></li>
+              <li><a href="./order-history.html">Order History</a></li>
+              <li><a href="./login.html">Log out</a></li>
+          </li>
+        </ul>
+        </li>
+        <div class="ap-nav-margin"></div>
+        </ul>
+        <span class="menu-right" style="top: 10px;">
+          <li>
+            <div id="searchToggle" onclick="searchToggle()">
+              <img src="./assets/icon/icon-Search.svg" alt="icon-search">
+            </div>
+          </li>
+          <li class="menu-right-login dropdown">
+            <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <img src="./assets/icon/Icon-Login.svg" alt="icon-login">
+            </a>
+            <div class="dropdown-menu login-all-box" aria-labelledby="dropdownMenuLink">
+              <span class="login-triangle"></span>
+              <a class="dropdown-item" href="./userInfo.html">My Profile</a>
+              <a class="dropdown-item" href="./order-history.html">Order History</a>
+              <a class="dropdown-item" href="./login.html">Log out</a>
+            </div>
+          </li>
+          <li><a href="#">
+              <img src="./assets/icon/Icon-Cart.svg" alt="Icon-Cart">
+              <a class="cart"><span>0</span></a>
+            </a>
+          </li>
+        </span>
+      </nav>
+    </div>
+  </header>
+  <!-- search box -->
+  <div class="container" id="searchBoxOpen">
+    <div class="d-flex justify-content-center search-box" style="position: relative;">
+      <form action="/action_page.php" class="col-lg-10 col-sm-12 d-flex justify-content-center input-group">
+        <input class="searchbar-box" type="text" placeholder=" " name="search">
+        <button class="searchbar-box-btn ap-primary-btn text-r-1-4-1" type="button">SEARCH</button>
+      </form>
+    </div>
+  </div>
+  <!-- search box -->
+  <!-- header end -->
+  <div class="container">
+    <div class="mt-4" style="text-align: center;">
+    </div>
+    <!-- message start -->
+    <div class="container  col-lg-6 col-sm-12 col-md-6 cart-border-message mb-4 mt-4" style="height: 400px">
+      <section>
+        <!-- content start -->
+        <div class="d-flex justify-content-center mt-4 mb-4">
+          <div class="col-11 text-r-1-3-1 gray-800">
+            <section>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10"
+                  cx="65.1" cy="65.1" r="62.1" />
+                <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round"
+                  stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+              </svg>
+              <div class="col-12 mt-4 mb-4">
+                <div class="col-12 d-flex justify-content-center text-r-3-4-3 ap-green">SUCCESS!</div>
+                <div class="col-12 d-flex justify-content-center">YAY, EVERYTHING IS WORKING.</div>
+              </div>
+            </section>
+            <!-- btn next start -->
+            <div class="col-12">
+              <div class=" d-flex justify-content-center">
+                <a href="/" class="messege-btn text-r-2-4-2">Continute</a>
+              </div>
+            </div>
+            <!-- btn next end -->
+          </div>
+        </div>
+        <!-- content end -->
+      </section>
+    </div>
+    <!-- message end -->
+    <div class="mt-4" style="text-align: center;">
+    </div>
+    <!-- message start -->
+    <div class="container  col-lg-6 col-sm-12 col-md-6 cart-border-message mb-4 mt-4" style="height: 400px">
+      <section>
+        <!-- content start -->
+        <div class="d-flex justify-content-center mt-4 mb-4">
+          <div class="col-11 text-r-1-3-1 gray-800">
+            <section>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 244 244">
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: #AC4646;
+                    }
+                  </style>
+                </defs>
+                <g id="Group_1094" data-name="Group 1094" transform="translate(2083 -2219)">
+                  <path fill="none" stroke-miterlimit="10" id="Union_23" data-name="Union 23" class="cls-1"
+                    d="M13.755,121.048a5.788,5.788,0,0,1,.573-8.177L66.446,67.662,14.328,22.454a5.79,5.79,0,1,1,7.607-8.732L75.283,60l53.35-46.277a5.8,5.8,0,1,1,7.623,8.75L84.138,67.678l52.119,45.208a5.79,5.79,0,1,1-7.606,8.732L75.3,75.343,21.951,121.62a5.818,5.818,0,0,1-8.2-.572Z"
+                    transform="translate(-2036.292 2273.83)" />
+                  <path stroke-linecap="round" stroke-miterlimit="10" id="Exclusion_4" data-name="Exclusion 4"
+                    class="cls-1"
+                    d="M122,244a122.9,122.9,0,0,1-24.587-2.479,121.333,121.333,0,0,1-43.624-18.357,122.355,122.355,0,0,1-44.2-53.676,121.382,121.382,0,0,1-7.109-22.9,123.19,123.19,0,0,1,0-49.175A121.333,121.333,0,0,1,20.836,53.789a122.355,122.355,0,0,1,53.677-44.2,121.382,121.382,0,0,1,22.9-7.109,123.19,123.19,0,0,1,49.175,0,121.331,121.331,0,0,1,43.624,18.357,122.355,122.355,0,0,1,44.2,53.677,121.386,121.386,0,0,1,7.109,22.9,123.189,123.189,0,0,1,0,49.175,121.332,121.332,0,0,1-18.357,43.624,122.355,122.355,0,0,1-53.676,44.2,121.388,121.388,0,0,1-22.9,7.109A122.9,122.9,0,0,1,122,244Zm0-234a112.828,112.828,0,0,0-22.572,2.275A111.387,111.387,0,0,0,59.38,29.128,112.328,112.328,0,0,0,18.8,78.4a111.434,111.434,0,0,0-6.526,21.024,113.091,113.091,0,0,0,0,45.144A111.385,111.385,0,0,0,29.128,184.62,112.328,112.328,0,0,0,78.4,225.2a111.441,111.441,0,0,0,21.024,6.526,113.093,113.093,0,0,0,45.144,0,111.385,111.385,0,0,0,40.048-16.852A112.328,112.328,0,0,0,225.2,165.6a111.443,111.443,0,0,0,6.526-21.023,113.093,113.093,0,0,0,0-45.144A111.387,111.387,0,0,0,214.872,59.38,112.328,112.328,0,0,0,165.6,18.8a111.437,111.437,0,0,0-21.023-6.526A112.825,112.825,0,0,0,122,10Z"
+                    transform="translate(-2083 2219)" />
+                </g>
+              </svg>
+              <div class="col-12 mt-4 mb-4">
+                <div class="col-12 d-flex justify-content-center text-r-3-4-3 ap-red">ERROR!</div>
+                <div class="col-12 d-flex justify-content-center">OH NO, SOMETHING WENT WRONG.</div>
+              </div>
+            </section>
+            <!-- btn next start -->
+            <div class="col-12">
+              <div class=" d-flex justify-content-center">
+                <a href="/" class="messege-btn text-r-2-4-2">Continute</a>
+              </div>
+            </div>
+            <!-- btn next end -->
+          </div>
+        </div>
+        <!-- content end -->
+      </section>
+    </div>
+    <!-- message end -->
+    <!-- change password start -->
+    <!-- change password end -->
+  </div>
+  <!-- footer start -->
+  <div class="text-center footer-box text-r-1-3-1">
+    <p> ©2019 Aussie Premier. All rights reserved. </p>
+  </div>
+  <!-- footer end -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./dist/js/popper.min.js"></script>
+  <script src="./dist/js/bootstrap.min.js"></script>
+  <script src="./dist/js/purecookie.js"></script>
+  <script src="./dist/js/jquery.smartmenus.js"></script>
+  <!-- <script src="./dist/js/all.min.js"></script> -->
+  <script src="./dist/js/all.js"></script>
+
+</body>
+
+</html>

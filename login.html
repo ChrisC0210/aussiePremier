@@ -304,10 +304,10 @@
                 </div>
             </div>
             <div class="form-group text-r-1-4-1">
-              <a href=" " class="gray-800" data-toggle="modal" data-target="#forgotPW">Forgot Your Passwords?</a>
+              <button type="button" class="gray-800" data-toggle="modal" data-target="#forgotPW">Forgot Your Passwords?</button>
             </div>
             <!-- Modal forgot PW -->
-            <div class="modal" id="signIn" style="z-index: 999999;" id="forgotPW" tabindex="-1" role="dialog" aria-labelledby="forgotPWTitle" aria-hidden="true">
+            <div class="modal" style="z-index: 999999;" id="forgotPW" tabindex="-1" role="dialog" aria-labelledby="forgotPWTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -326,6 +326,9 @@
                         <label for="txt_email">Email address</label>
                         <input name="txt_email" id="txt_email" type="email" class="form-control" id="txt_email"
                           aria-describedby="emailHelp" placeholder=" ">
+                          <div class="invalid-feedback">
+                              Please enter your email.
+                            </div>
                       </div>
                     </div>
                     <div class="d-flex justify-content-center">
@@ -384,5 +387,5 @@
   }, false);
 }());
   </script>
-
+</body>
 </html>

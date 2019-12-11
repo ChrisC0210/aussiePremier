@@ -8846,6 +8846,10 @@ a.text-dark:focus, a.text-dark:hover {
   color: #AC4646;
 }
 
+.ap-green {
+  color: #73AF55;
+}
+
 .ap-pink-200 {
   color: #F4E2E3;
 }
@@ -11211,6 +11215,11 @@ svg {
   }
 }
 
+.cart-border-message {
+  border: solid 2px #E6E6E6;
+  border-radius: 2px;
+}
+
 .hemePage-img {
   height: 630px;
   width: 100%;
@@ -11549,6 +11558,25 @@ svg {
   float: none;
   text-decoration: underline;
   text-transform: uppercase;
+}
+
+.messege-btn {
+  padding: 10px 20px 10px 20px;
+  border-radius: 2px;
+  color: #fefefe;
+  background-color: #707070;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .messege-btn {
+    padding: 10px 40px 10px 40px;
+  }
+}
+
+.messege-btn:hover, .messege-btn:active {
+  text-decoration: none;
+  color: #fefefe;
 }
 
 .cart {

@@ -153,3 +153,20 @@
   text-decoration: underline;
   text-transform: uppercase;
 }
+.messege-btn{
+  padding: 10px 20px 10px 20px;
+  border-radius: 2px;
+  color: $white;
+  background-color: $gray-700;
+  text-align: center;
+  @media screen and (max-width: 500px) {
+    padding: 10px 40px 10px 40px;
+  }
+  &:hover, &:active{
+    text-decoration: none;
+    color: $white;
+  }
+}
+// .move {
+//   animation: move 3s ease-in-out infinite;
+// }
