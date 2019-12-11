@@ -138,22 +138,28 @@
       <div class="tab-content" id="pills-tabContent">
         <!-- Register start -->
         <div class="tab-pane fade show active" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
-          <form name="form_register" action="process_registration.php" method="post" onsubmit="return validate_registration()" class="needs-validation form-border gray-600 text-r-1-3-1">
+          <form name="form_register" action="process_registration.php" method="post" onsubmit="return validate_registration()" class="needs-validation form-border gray-600 text-r-1-3-1"  id="needs-validation" novalidate>
             <div class="form-group">
               <label for="form-control">Email address *</label>
               <input maxlength="80" name="member_email" type="email" class="form-control" id="form-control"
                 aria-describedby="emailHelp" placeholder=" " required>
                 <div class="invalid-feedback">
-                    Please enter a message in the textarea.
+                    Please enter a email in the textarea.
                   </div>
             </div>
             <div class="form-group">
               <label for="member_password">Password *</label>
               <input maxlength="25" name="member_password" type="password" class="form-control" id="member_password" placeholder=" " required>
+              <div class="invalid-feedback">
+                  Please enter password.
+                </div>
             </div>
             <div class="form-group">
               <label for="member_re_password">Confirm Password *</label>
               <input maxlength="25" name="member_re_password" type="password" class="form-control" id="member_re_password" placeholder=" " required>
+              <div class="invalid-feedback">
+                  Please enter same password.
+                </div>
             </div>
             <div>Title</div>
             <div class="form-group d-flex">
@@ -167,7 +173,7 @@
               <div class="form-check mr-4">
                 <input class="form-check-input" type="radio" name="member_title" id="member_title" value="Mrs.">
                 <label class="form-check-label" for="TitleRadios2">
-                  Mrs.
+                  Mrs.  
                 </label>
               </div>
               <div class="form-check mr-4">
@@ -181,11 +187,17 @@
               <label for="InputConfirmFirstName">First Name *</label>
               <input maxlength="25" name="member_first_name" type="FirstName" class="form-control"
                 id="InputConfirmFirstName" placeholder=" " required>
+                <div class="invalid-feedback">
+                    Please enter first name.
+                  </div>
             </div>
             <div class="form-group">
               <label for="InputConfirmLastName">Last Name * </label>
               <input maxlength="25" name="member_last_name" type="LastName" class="form-control"
                 id="InputConfirmLastName" placeholder=" " required>
+                <div class="invalid-feedback">
+                    Please enter last name.
+                  </div>
             </div>
             <div class="form-group">
               <label for="member_mobile_number">Mobile Number</label>
@@ -196,11 +208,17 @@
               <label for="member_contact_number">Contact Number * </label>
               <input maxlength="20" name="member_contact_number" type="ContactNumber" class="form-control"
                 id="member_contact_number" placeholder=" " required>
+                <div class="invalid-feedback">
+                    Please enter contact number.
+                  </div>
             </div>
             <div class="form-group">
               <label for="InputConfirmCompanyName">Company Name *</label>
               <input maxlength="50" name="member_company_name" type="CompanyName" class="form-control"
                 id="InputConfirmCompanyName" placeholder=" " required>
+                <div class="invalid-feedback">
+                    Please enter company name.
+                  </div>
             </div>
             <div class="form-group">
               <label for="InputConfirmPosition">Position</label>
@@ -262,24 +280,31 @@
               </div>
             </div>
             <!-- Modal Privacy Policy -->
-            <button name="from_url" value="index.php" type="submit" class="gray-btn text-r-3-4-3">Register</button>
+            <!-- <button name="from_url" value="index.php" type="submit" class="gray-btn text-r-3-4-3">Register</button> -->
+            <button type="submit" class="gray-btn text-r-3-4-3">Register</button>
           </form>
         </div>
         <!-- Register end -->
         <!-- Sign in start -->
         <div class="tab-pane fade" id="pills-signIn" role="tabpanel" aria-labelledby="pills-signIn-tab">
-          <form class="form-border gray-600 text-r-1-3-1" name="form_login" action="process_login.php" method="post">
+          <form class="form-border gray-600 text-r-1-3-1" name="form_login" action="process_login.php" method="post" id="needs-validation-signin" novalidate>
             <div class="form-group">
               <label for="txt_email">Email address *</label>
               <input name="txt_email" id="txt_email" type="email" class="form-control" id="txt_email"
                 aria-describedby="emailHelp" placeholder=" " required>
+                <div class="invalid-feedback">
+                    Please enter your email.
+                  </div>
             </div>
             <div class="form-group">
               <label for="txt_password">Password *</label>
               <input name="txt_password" type="password" class="form-control" id="txt_password" placeholder=" " required>
+              <div class="invalid-feedback">
+                  Please enter your password.
+                </div>
             </div>
             <div class="form-group text-r-1-4-1">
-              <a href="#" class="gray-800" data-toggle="modal" data-target="#forgotPW">Forgot Your Passwords?</a>
+              <a href=" " class="gray-800" data-toggle="modal" data-target="#forgotPW">Forgot Your Passwords?</a>
             </div>
             <!-- Modal forgot PW -->
             <div class="modal" id="signIn" style="z-index: 999999;" id="forgotPW" tabindex="-1" role="dialog" aria-labelledby="forgotPWTitle" aria-hidden="true">
@@ -311,7 +336,8 @@
                 </div>
             </div>
             <!-- Modal forgot PW -->
-            <button name="from_url" value="index.php" type="submit" class="gray-btn text-r-3-4-3">Sign in</button>
+            <!-- <button name="from_url" value="index.php" type="submit" class="gray-btn text-r-3-4-3">Sign in</button> -->
+            <button  type="submit" class="gray-btn text-r-3-4-3">Sign in</button>
           </form>
         </div>
         <!-- Sign in end -->
@@ -330,5 +356,33 @@
   <script src="./dist/js/purecookie.js"></script>
   <script src="./dist/js/jquery.smartmenus.js"></script>
   <script src="./dist/js/all.js"></script>
+  <script>
+(function() {
+  "use strict";
+  window.addEventListener("load", function() {
+    var form = document.getElementById("needs-validation");
+    form.addEventListener("submit", function(event) {
+      if (form.checkValidity() == false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add("was-validated");
+    }, false);
+  }, false);
+}());
+(function() {
+  "use strict";
+  window.addEventListener("load", function() {
+    var formSigniIn = document.getElementById("needs-validation-signin");
+    formSigniIn.addEventListener("submit", function(event) {
+      if (formSigniIn.checkValidity() == false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      formSigniIn.classList.add("was-validated");
+    }, false);
+  }, false);
+}());
+  </script>
 
 </html>

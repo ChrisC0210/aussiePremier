@@ -1,3 +1,26 @@
+.btn-primary {
+  //background-color: #33cabb;
+  //border-color: #33cabb;
+  color: $gray-800;
+  background-color: $ap-yellow-600;
+  border-color: $ap-yellow-600;
+  &:hover, &:active{
+    background-color: $ap-yellow-200;
+    border-color: $ap-yellow-200;
+    color: $gray-800;
+  }
+
+}
+// .btn-bold {
+//   font-family: Roboto, sans-serif;
+//   text-transform: uppercase;
+//   font-weight: 500;
+//   font-size: 12px;
+// }
+.btn:hover {
+  cursor: pointer;
+}
+
 .ap-primary-btn{
   cursor: pointer;
   padding: 10px 0 10px 0;
@@ -112,4 +135,21 @@
     text-decoration: none;
     color: $white;
   }
+}
+//cart
+.remove {
+  bottom: 1.125rem;
+  float: right;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  width: 45%;
+}
+
+.remove button {
+  background-color: transparent;
+  color: #777;
+  float: none;
+  text-decoration: underline;
+  text-transform: uppercase;
 }

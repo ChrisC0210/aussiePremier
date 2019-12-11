@@ -10205,31 +10205,8 @@ h5.card-title {
   margin-bottom: 0;
 }
 
-.btn-primary {
-  background-color: #33cabb;
-  border-color: #33cabb;
-  color: #fff;
-}
-
-.btn-bold {
-  font-family: Roboto, sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 12px;
-}
-
-.btn-primary:hover {
-  background-color: #52d3c7;
-  border-color: #52d3c7;
-  color: #fff;
-}
-
-.btn:hover {
-  cursor: pointer;
-}
-
 .form-control:focus {
-  border-color: #6545eb;
+  border-color: #212529;
   color: #4d5259;
   -webkit-box-shadow: 0 0 0 0.1rem rgba(51, 202, 187, 0);
   box-shadow: 0 0 0 0.1rem rgba(101, 69, 235, 0);
@@ -11401,6 +11378,22 @@ svg {
   color: #414141;
 }
 
+.btn-primary {
+  color: #414141;
+  background-color: #fee100;
+  border-color: #fee100;
+}
+
+.btn-primary:hover, .btn-primary:active {
+  background-color: #FFF291;
+  border-color: #FFF291;
+  color: #414141;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
 .ap-primary-btn {
   cursor: pointer;
   padding: 10px 0 10px 0;
@@ -11541,6 +11534,23 @@ svg {
   color: #fefefe;
 }
 
+.remove {
+  bottom: 1.125rem;
+  float: right;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  width: 45%;
+}
+
+.remove button {
+  background-color: transparent;
+  color: #777;
+  float: none;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
 .cart {
   position: absolute;
   top: 10px;
@@ -11559,6 +11569,17 @@ svg {
 
 .add-to-cart {
   text-align: center;
+}
+
+.remove-product {
+  padding: 4px 10px;
+  border-radius: 2px;
+  margin-left: 20px;
+  cursor: pointer;
+  width: 100%;
+  border: solid 1px #fefefe;
+  background-color: #707070;
+  color: #fefefe;
 }
 
 #notfound {
