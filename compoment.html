@@ -167,7 +167,42 @@
       </section>
     </div>
     <!-- message end -->
+    <h2 class="mb-2 mt-2" style="text-align: center;">change password</h2>
     <!-- change password start -->
+    <div class="d-flex justify-content-center mb-4">
+      <div class="tab-pane fade show active" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
+        <form name="form_register" action="process_registration.php" method="post" onsubmit="return checkForm();"
+          class="needs-validation form-border gray-600 text-r-1-3-1" id="needs-validation" novalidate>
+          <div class="form-group">
+            <label for="member_password">Old Password *</label>
+            <input id="member_password" name="member_password" name="member_email" type="password" class="form-control"
+              placeholder=" " required>
+            <div class="invalid-feedback">
+              Please enter your old Password.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="member_newpassword">New Password *</label>
+            <input maxlength="25" name="member_newpassword" type="password" class="form-control" id="member_newpassword"
+              placeholder=" " required>
+            <div class="invalid-feedback">
+              Please enter new password.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="member_re_password">Confirm Password *</label>
+            <input maxlength="25" name="member_re_password" type="password" class="form-control" id="member_re_password"
+              placeholder=" " required>
+            <div class="invalid-feedback">
+              Please enter same password.
+            </div>
+          </div>
+          <!-- <button name="from_url" value="index.php" type="submit" class="gray-btn text-r-3-4-3">Register</button> -->
+          <button type="submit" class="gray-btn text-r-3-4-3">Send</button>
+        </form>
+      </div>
+    </div>
+
     <!-- change password end -->
   </div>
   <!-- footer start -->
@@ -182,7 +217,39 @@
   <script src="./dist/js/jquery.smartmenus.js"></script>
   <!-- <script src="./dist/js/all.min.js"></script> -->
   <script src="./dist/js/all.js"></script>
+  <script>
+    //change password
+    function checkForm() {
+      var oldPassword = document.getElementById("member_password").value;
+      var newPassword = document.getElementById("member_newpassword").value;
+      var confirmPassword = document.getElementById("member_re_password").value;
 
+      if (oldPassword != "" && newPassword != "" && confirmPassword != "") {
+        if (oldPassword != newPassword) {
+          if (newPassword == confirmPassword) {
+            return true;
+          }
+          else {
+            alert("Confirm password is not same as you new password.");
+            return false;
+          }
+        }
+        else {
+          alert(" This Is Your Old Password, Please Provide A New Password");
+          return false;
+        }
+      }
+      else {
+        alert("All Fields Are Required");
+        return false;
+      }
+    }
+    function resetForm() {
+      var oldP = document.getElementById("member_password").value = "";
+      var newP = document.getElementById("member_newpassword").value = "";
+      var confirmP = document.getElementById("member_re_password").value = "";
+    }
+  </script>
 </body>
 
 </html>
