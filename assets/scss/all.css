@@ -11198,28 +11198,6 @@ svg {
   margin-bottom: 20px;
 }
 
-.cart-border {
-  border: solid 2px #E6E6E6;
-  border-radius: 2px;
-}
-
-@media screen and (max-width: 500px) {
-  .cart-border {
-    border: solid 2px #fefefe;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .cart-border {
-    border: solid 2px #fefefe;
-  }
-}
-
-.cart-border-message {
-  border: solid 2px #E6E6E6;
-  border-radius: 2px;
-}
-
 .hemePage-img {
   height: 630px;
   width: 100%;
@@ -11372,6 +11350,7 @@ svg {
           transform: translate(-50%, -50%);
   margin: 0 auto;
   font-size: 16px;
+  width: 100%;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -11543,6 +11522,16 @@ svg {
   color: #fefefe;
 }
 
+.cart-next-btn {
+  cursor: pointer;
+  /* width: 100%; */
+  /* padding: 12px 0 12px 0; */
+  border-radius: 2px;
+  /* border: solid 1px #fefefe; */
+  background-color: #707070;
+  color: #fefefe;
+}
+
 .remove {
   bottom: 1.125rem;
   float: right;
@@ -11608,6 +11597,34 @@ svg {
   border: solid 1px #fefefe;
   background-color: #707070;
   color: #fefefe;
+}
+
+.cart-border {
+  border: solid 2px #E6E6E6;
+  border-radius: 2px;
+  padding: 20px 20px 20px 20px;
+  margin: 40px 20px 40px 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .cart-border {
+    border: solid 2px #fefefe;
+    margin: 40px 0px 40px 0px;
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cart-border {
+    border: solid 2px #fefefe;
+    margin: 40px 0px 40px 0px;
+    padding: 0px;
+  }
+}
+
+.cart-border-message {
+  border: solid 2px #E6E6E6;
+  border-radius: 2px;
 }
 
 #notfound {
