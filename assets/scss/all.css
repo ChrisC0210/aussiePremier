@@ -11201,9 +11201,33 @@ svg {
 .hemePage-img {
   height: 630px;
   width: 100%;
-  background-color: #797979;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.banner-img {
+  width: 100%;
+  min-height: 400px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  filter: drop-shadow(2px 4px 4px rgba(110, 110, 110, 0.4));
+  -webkit-filter: drop-shadow(2px 4px 4px rgba(110, 110, 110, 0.4));
+}
+
+.banner-bg {
+  z-index: 1;
+}
+
+.banner-bg:before {
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+  height: 600px;
+  width: 100%;
+  background-image: url("/assets/img/bernard-hermant-PrZw3_3xUxI-unsplash.jpg");
+  opacity: 0.5;
 }
 
 .banner-box {
@@ -11566,6 +11590,10 @@ svg {
 .messege-btn:hover, .messege-btn:active {
   text-decoration: none;
   color: #fefefe;
+}
+
+.banner-btn {
+  padding: 10px 20px 10px 20px;
 }
 
 .cart {
