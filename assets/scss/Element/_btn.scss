@@ -183,4 +183,8 @@
 //191216 chris add
 .banner-btn{
   padding: 10px 20px 10px 20px;
+  &:hover, &:active{
+    text-decoration: none;
+    color: $white;
+  }
 }

@@ -11216,18 +11216,28 @@ svg {
 
 .banner-bg {
   z-index: 1;
+  height: 600px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .banner-bg:before {
   content: " ";
   position: absolute;
-  top: 0px;
   left: 0;
   z-index: -1;
   height: 600px;
   width: 100%;
-  background-image: url("/assets/img/bernard-hermant-PrZw3_3xUxI-unsplash.jpg");
+  background-image: url("/assets/img/img-banner-bg.jpg");
   opacity: 0.5;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 375px) {
+  .banner-bg:before {
+    height: 580px;
+  }
 }
 
 .banner-box {
@@ -11324,6 +11334,15 @@ svg {
   padding: 20px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.product-box-img img:hover, .product-box-img img:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .product-details {
@@ -11594,6 +11613,11 @@ svg {
 
 .banner-btn {
   padding: 10px 20px 10px 20px;
+}
+
+.banner-btn:hover, .banner-btn:active {
+  text-decoration: none;
+  color: #fefefe;
 }
 
 .cart {

@@ -25,19 +25,27 @@
 .banner-bg{
   //background-color: rgba(0, 0, 0, 0.37);
   z-index: 1;
+  height: 600px;
+  box-sizing: border-box;
   //max-height: 100vh;
   // box-shadow: 0 -4px 24px rgba(0,0,0,0.1);
   // -webkit-box-shadow: 0 -4px 24px rgba(0,0,0,0.1);
   &:before{
     content: " ";
     position:absolute;
-    top: 0px;
+    //top: 80px;
     left: 0;
     z-index: -1;
     height:  600px;
     width: 100%;
-    background-image: url("/assets/img/bernard-hermant-PrZw3_3xUxI-unsplash.jpg");
+    background-image: url("/assets/img/img-banner-bg.jpg");
     opacity:0.5;//透明度设置
+    background-repeat: no-repeat;
+    //background-size: 100% 100%;
+    background-size: cover;
+    @media screen and (max-width: 375px) {
+      height:  580px;
+    }
   }
 }
 //
@@ -123,6 +131,12 @@
     padding: 20px;
     //padding: 0px 20px 0px 20px;
     object-fit: cover;
+    //zoom in
+    transform: scale(1);
+    transition: all 0.3s;
+    &:hover, &:active{
+      transform: scale(1.2);
+    }
   }
 }
 .product-details{
