@@ -1,5 +1,5 @@
 // Navigation Variables
-$content-width: 1000px;
+$content-width: 1080px;
 $breakpoint: 799px;
 $nav-height: 70px;
 $nav-background: #7a4b4b;
@@ -70,7 +70,44 @@ nav {
     }
   }
 }
-
+//2
+.nav-left {
+  float: left;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      position: relative;
+      a,
+      a:visited {
+        display: block;
+        padding: 0 20px;
+        line-height: $nav-height;
+        background: $nav-background;
+        color: $nav-font-color;
+        text-decoration: none;
+        &:hover {
+          background: $link-hover-color;
+          color: $nav-font-color;
+        }
+        &:not(:only-child):after {
+          padding-left: 4px;
+          content: ' ▾';
+        }
+      } // Dropdown list
+      ul li {
+        min-width: 190px;
+        a {
+          padding: 15px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+//
 // Dropdown list binds to JS toggle event
 .nav-dropdown {
   position: absolute;
