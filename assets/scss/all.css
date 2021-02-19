@@ -11228,7 +11228,7 @@ svg {
   z-index: -1;
   height: 600px;
   width: 100%;
-  background-image: url("/assets/img/img-banner-bg.jpg");
+  background-image: url("./assets/img/img-banner-bg.jpg");
   opacity: 0.5;
   background-repeat: no-repeat;
   background-size: cover;
